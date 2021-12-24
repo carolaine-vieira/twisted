@@ -97,8 +97,20 @@
 
         <div class="item">
           <div class="item-title">Post Info</div>
-          <div class="item-content">
-            Info
+          <div class="item-content post-info">
+            <div class="post-date">
+              <span class="title">Posted on: </span>
+              <?php the_date(); ?>
+            </div>
+            <div class="post-tags">
+              <span class="title">Tags: </span>
+              <?php the_tags(""); ?> 
+              <!-- , "<span>/</span>" -->
+            </div>
+            <div class="post-shortlink">
+              <span class="title">Short URL: </span>
+              <span class="short"><?php echo wp_get_shortlink(); ?></span>
+            </div>
           </div>
         </div>
 
