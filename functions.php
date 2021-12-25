@@ -1,8 +1,10 @@
 <?php
 
+// adding theme support
 add_theme_support('post-thumbnails');
 add_theme_support('post-formats', array( 'gallery', 'quote', 'image', 'video' ));
 
+// custom header menu
 $args = array(
   'flex-width'    => true,
   'width'         => 1500,
@@ -12,6 +14,7 @@ $args = array(
 );
 add_theme_support('custom-header', $args);
 
+// custom menus
 function register_my_menus()
 {
     register_nav_menus(

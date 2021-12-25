@@ -15,10 +15,8 @@
       <div class="left-container">
         <?php $author_id = get_the_author_meta('ID'); ?>
         <h1>Posts by 
-          <?php
-            echo get_the_author_meta('first_name', $author_id);
-            echo get_the_author_meta('last_name', $author_id);
-          ?>
+          <?php echo get_the_author_meta('first_name', $author_id); ?> 
+          <?php echo get_the_author_meta('last_name', $author_id);?>
           (@<?php echo get_the_author_meta('nickname', $author_id); ?>)
         </h1>        	
         <div class="description">
@@ -30,27 +28,41 @@
     <section id="posts">
       <div id="posts-container" class="grid author-page-posts">
         <?php
-        $args = array( 'posts_per_page' => 15 );
-
-        $the_query = new WP_Query($args);
-        
-        if ($the_query->have_posts()) :
-           
-            while ($the_query->have_posts()) : $the_query->the_post();
+          $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+          $args = array(
+            'posts_per_page' => 5,
+            'paged' => $paged,
+          );
+          $query = new WP_Query($args);
+          
+          if ($query -> have_posts()) :
+            while ($query -> have_posts()) :
+              $query -> the_post();
               the_post();
               get_template_part('template-parts/content', get_post_format());
             endwhile;
-        else:
-        
+          else:
             _e('Sorry, no posts matched your criteria.', 'textdomain');
-        endif;
-        
-        wp_reset_postdata();
+          endif;
+          
+          wp_reset_postdata();
         ?>
       </div>
-
+      
       <!-- <div class="read-more">Load More Posts</div> -->
     </section>
+
+    <div class="ee">
+      <?php
+        echo paginate_links(
+            array(
+              'current'=> max(1, get_query_var('paged')),
+              'total' => $query -> max_num_pages,
+              'mid_size' => 2
+          )
+        );
+      ?>
+    </div>
 
     <section id="contact">
       <div class="left-container">

@@ -62,22 +62,22 @@
     <section id="posts">
       <div id="posts-container" class="grid">
         <?php
-        $args = array( 'posts_per_page' => 15 );
-
-        $the_query = new WP_Query($args);
-        
-        if ($the_query->have_posts()) :
-           
-            while ($the_query->have_posts()) : $the_query->the_post();
+          $args = array(
+            'posts_per_page' => 15,
+          );
+          $the_query = new WP_Query($args);
+          
+          if ($the_query->have_posts()) :
+            while ($the_query->have_posts()) :
+              $the_query->the_post();
               the_post();
               get_template_part('template-parts/content', get_post_format());
             endwhile;
-        else:
-        
+          else:
             _e('Sorry, no posts matched your criteria.', 'textdomain');
-        endif;
-        
-        wp_reset_postdata();
+          endif;
+          
+          wp_reset_postdata();
         ?>
       </div>
 
