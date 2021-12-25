@@ -77,7 +77,7 @@
         <div class="item">
           <div class="item-title">Author Info</div>
           <div class="item-content">
-            Author
+          <?php the_author_posts_link(); ?>
           </div>
         </div>
 
