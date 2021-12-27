@@ -208,7 +208,8 @@ section
       margin-bottom: -6px
 
     .post
-      width: calc( 100% / 4 )
+      width: calc( 100vw / 4 - 30px )
+      height: 15vw
       background: var(--white)
       overflow: hidden
       object-fit: cover
@@ -231,257 +232,6 @@ section
           a
             color: var(--color-one)
 
-    .post-tam-2
-      width: 50%
-
-.first-section-single
-  min-height: unset
-
-  .social-media
-    left: initial !important
-    right: var(--global-padding)
-    bottom: 120px !important
-
-    ul
-      li
-        margin-right: 0
-        margin-left: 10px
-
-  .left-container
-    margin-top: 0 !important
-    background: rgba(0, 0, 0, 0.4)
-    // backdrop-filter: blur(1px)
-    padding: 160px var(--global-padding) var(--global-padding) var(--global-padding)
-    width: 65% !important
-
-  .description
-    opacity: 0.8
-
-.post,
-.post-single
-  p
-    margin: 10px 0
-    text-align: justify
-
-  p:first-child
-    margin: 0 0 10px 0
-
-  blockquote
-    border-left: 3px solid var(--color-one)
-    background: rgba(0, 0, 0, 0.1)
-    margin: 5px 0
-    padding: 10px
-
-    p,
-    p:first-child
-      margin: 0
-
-  a
-    border-bottom: 1px solid
-
-  ul
-    margin: 8px 0 8px 40px
-
-    li
-      list-style: unset
-
-  h2
-    font-family: var(--title-font)
-    margin: 20px 0 10px 0
-
-  .is-style-large
-    text-align: center
-    border-left: none
-    background: transparent
-    margin: 5px 0 10px 0
-
-    p
-      text-align: center
-      font-family: var(--alt-font)
-      margin-bottom: 5px
-      font-size: 25px
-
-  .wp-block-pullquote
-    border-top: 3px solid var(--color-one)
-    border-bottom: 3px solid var(--color-one)
-    margin: 0
-    padding: 1em 0
-
-    blockquote
-      background: transparent
-      border-left: none
-
-      p
-        font-weight: 600
-        text-align: center
-
-  table
-    border-collapse: collapse
-    width: 100%
-
-  .wp-block-table
-    figcaption
-      font-size: 13px
-      border: none
-      font-style: italic
-      margin-bottom: 0
-
-  .is-style-regular
-    td, th
-      border: 1px solid var(--color-one)
-      text-align: left
-      padding: 8px
-
-  .is-style-stripes
-    td, th
-      border: 1px solid #dddddd
-      text-align: left
-      padding: 8px
-
-    tr:nth-child(odd)
-      background-color: #eee
-
-  .wp-block-cover
-    p
-      text-align: center
-
-  .blocks-gallery-grid,
-  .wp-block-gallery
-    margin: 0
-
-  figcaption
-    text-align: center
-
-  .wp-block-media-text__content
-    p.has-large-font-size
-      line-height: 1.4em
-      text-align: left
-      font-size: 25px
-      font-family: var(--alt-font)
-
-#single-post-container
-  min-height: unset
-  display: flex
-  background: var(--color-one)
-  padding: var(--global-padding)
-  margin: 0 0 -10px 0
-
-  .post-container
-    width: calc(69% + 25px)
-
-    .post-single
-      background: var(--white)
-      margin: 0 var(--global-padding) 0 0
-      padding: 40px
-      line-height: 1.6em
-
-      h3
-        font-family: var(--title-font)
-        font-size: 30px
-
-        span
-          display: inline-block
-          position:
-
-        span:before
-          @extend .pseudo-el
-
-  #post-options
-    width: calc(31% - 25px)
-    padding: 40px 0 0 40px
-
-    .permalink-navigation
-      margin: 40px 0 0 0
-      font-family: var(--title-font)
-      line-height: 2.5em
-
-      a
-        color: var(--white)
-        border: none
-
-    .category
-      position: absolute
-      margin: -90px 0 0 0
-
-      .post-categories
-        margin: 0
-
-        li
-          list-style: none
-          position: relative
-          display: none
-
-          a
-            color: var(--white)
-            border: none
-
-        li:before
-          content: "//"
-          display: inline-block
-          margin-right: 5px
-          color: var(--white)
-
-        li:first-child
-          display: block
-
-    .item
-      margin-bottom: 24px
-
-      .item-title
-        cursor: pointer
-        font-family: var(--title-font)
-        color: var(--white)
-
-      .item-content
-        display: none
-
-        .comments-box
-
-      .post-info
-        //font-family: var(--title-font)
-        color: var(--white)
-        //font-size: 15px
-        padding-left: 15px
-        margin: 15px 0 40px 0
-        border-left: 2px solid
-
-        span.title
-          font-weight: 600
-
-        .post-date
-          color: var(--white)
-          margin: 15px 0 10px 0
-
-        .post-tags
-          margin: 15px 0 15px 0
-
-          a
-            display: inline-block
-            margin-bottom: 4px
-            color: var(--white)
-            opacity: 0.8
-            border-bottom-color: transparent
-
-          a:hover
-            opacity: 1
-            border-bottom: 1px solid
-
-        .post-shortlink
-          span.short
-            font-size: 14px
-            padding: 1px 5px
-            border-radius: 3px
-            background: rgba(255, 255, 255, 0.2)
-
-  .type-page
-    width: 100%
-
-    .post-single
-      margin: 0
-
-      h3
-        text-align: center
-
 .page-container
   padding: 0 !important
 
@@ -493,14 +243,6 @@ section
 
     .post-single
       margin: 0 0 0 var(--global-padding) !important
-
-.first-section-single .left-container
-  padding-bottom: 120px
-
-.type-page
-  position: relative
-  z-index: 1
-  top: -120px
 
 #testimonial
   min-height: unset
@@ -782,8 +524,12 @@ section
 
 .comments-box
   .comment-meta.commentmetadata
-    padding: 5px 10px
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+    padding: 0 10px 10px 10px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    margin: -5px 0 0 0
+
+    a
+      color: var(--color-one)
 
 .comments-box
   .reply

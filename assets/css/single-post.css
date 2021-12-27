@@ -1,0 +1,174 @@
+#twisted-single-post .pseudo-el, #twisted-single-post #posts .post-container .post-single h3 span:before {
+  content: "";
+  position: absolute;
+}
+
+#twisted-single-post #posts {
+  min-height: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--color-one);
+  padding: var(--global-padding);
+  margin: 0 0 -10px 0;
+}
+
+#twisted-single-post #posts .post-container {
+  width: calc(69% + 25px);
+}
+
+#twisted-single-post #posts .post-container .post-single {
+  background: var(--white);
+  margin: 0 var(--global-padding) 0 0;
+  padding: 40px;
+  line-height: 1.6em;
+}
+
+#twisted-single-post #posts .post-container .post-single h3 {
+  font-family: var(--title-font);
+  font-size: 30px;
+}
+
+#twisted-single-post #posts .post-container .post-single h3 span {
+  display: inline-block;
+}
+
+#twisted-single-post #posts #post-options {
+  width: calc(31% - 25px);
+  padding: 40px 0 0 40px;
+}
+
+#twisted-single-post #posts #post-options .permalink-navigation {
+  margin: 40px 0 0 0;
+  font-family: var(--title-font);
+  line-height: 2.5em;
+}
+
+#twisted-single-post #posts #post-options .permalink-navigation a {
+  color: var(--white);
+  border: none;
+}
+
+#twisted-single-post #posts #post-options .category {
+  position: absolute;
+  margin: -90px 0 0 0;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories {
+  margin: 0;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li {
+  list-style: none;
+  position: relative;
+  display: none;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li a {
+  color: var(--white);
+  border: none;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li:before {
+  content: "//";
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--white);
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li:first-child {
+  display: block;
+}
+
+#twisted-single-post #posts #post-options .item {
+  margin-bottom: 24px;
+}
+
+#twisted-single-post #posts #post-options .item .item-title {
+  cursor: pointer;
+  font-family: var(--title-font);
+  color: var(--white);
+}
+
+#twisted-single-post #posts #post-options .item .item-content {
+  display: none;
+}
+
+#twisted-single-post #posts #post-options .item .post-info {
+  color: var(--white);
+  padding-left: 15px;
+  margin: 15px 0 40px 0;
+  border-left: 2px solid;
+}
+
+#twisted-single-post #posts #post-options .item .post-info span.title {
+  font-weight: 600;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-date {
+  color: var(--white);
+  margin: 15px 0 10px 0;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-tags {
+  margin: 15px 0 15px 0;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-tags a {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: var(--white);
+  opacity: 0.8;
+  border-bottom-color: transparent;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-tags a:hover {
+  opacity: 1;
+  border-bottom: 1px solid;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-shortlink span.short {
+  font-size: 14px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#twisted-single-post #posts .type-page {
+  width: 100%;
+}
+
+#twisted-single-post #posts .type-page .post-single {
+  margin: 0;
+}
+
+#twisted-single-post #posts .type-page .post-single h3 {
+  text-align: center;
+}
+
+#twisted-single-post #first-section {
+  min-height: unset;
+}
+
+#twisted-single-post #first-section .social-media {
+  left: initial !important;
+  right: var(--global-padding);
+  bottom: 120px !important;
+}
+
+#twisted-single-post #first-section .social-media ul li {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+#twisted-single-post #first-section .left-container {
+  margin-top: 0 !important;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 160px var(--global-padding) 120px var(--global-padding);
+  width: 65%;
+}
+
+#twisted-single-post #first-section .description {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=single-post.css.map */

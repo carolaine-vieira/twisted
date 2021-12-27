@@ -71,7 +71,7 @@
             while ($the_query->have_posts()) :
               $the_query->the_post();
               the_post();
-              get_template_part('template-parts/content', get_post_format());
+              get_template_part('template-parts/content/content', get_post_format());
             endwhile;
           else:
             _e('Sorry, no posts matched your criteria.', 'textdomain');
@@ -96,41 +96,12 @@
           $query = new WP_Query($args);
 
           while ($query -> have_posts()) :
-                  $query -> the_post();
-                  get_template_part('template-parts/testimonial');
+            $query -> the_post();
+            get_template_part('template-parts/other/testimonial');
           endwhile;
 
           wp_reset_postdata();
         ?>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="left-container">
-        <b>Liked our work?</b>
-        <i>Send an email to contact us!</i>
-      </div>
-
-      <div class="right-container">
-        <label for="inpt_name">Name</label>
-        <input type="text" name="inpt_name" id="" placeholder="Gisele Mattos" />
-
-        <label for="inpt_email">Email</label>
-        <input
-          type="email"
-          name="inpt_email"
-          id=""
-          placeholder="gisele.mattos@gmail.com"
-        />
-
-        <label for="inpt_message">Message</label>
-        <textarea
-          name="inpt_message"
-          id="message"
-          cols="30"
-          rows="4"
-          placeholder="Your message"
-        ></textarea>
       </div>
     </section>
 
