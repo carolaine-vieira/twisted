@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  reviesAnimation();
   initMasonry();
   initSlide();
   initAccordion();
@@ -66,6 +67,16 @@ const initAccordion = () => {
     $(`.${elementId} .item-content`).slideToggle("fast", function () {
       // Animation complete.
     });
+  });
+};
+
+// Reviews animation
+const reviesAnimation = () => {
+  const reviews = document.querySelectorAll(".review");
+  reviews.forEach((review, index) => {
+    setTimeout(() => {
+      review.style.top = 0;
+    }, 150 * index);
   });
 };
 

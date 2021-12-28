@@ -28,7 +28,7 @@ body li {
   list-style: none;
 }
 
-.transition-4ms, header, header.scrolled, #testimonial .slide-container .slide, #testimonial .slide-container .active {
+.transition-4ms, header, header.scrolled, #first-section .left-container, #first-section .right-container .review, #testimonial .slide-container .slide, #testimonial .slide-container .active {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -163,6 +163,12 @@ section {
   width: 50%;
   padding-left: var(--global-padding);
   color: var(--white);
+  left: 0;
+  position: relative;
+  -webkit-animation-name: aside;
+          animation-name: aside;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 #first-section .left-container h1 {
@@ -189,6 +195,8 @@ section {
   overflow: hidden;
   margin: 0 0 32px -80px;
   font-family: var(--title-font);
+  position: relative;
+  top: 150px;
 }
 
 #first-section .right-container .review .icon,
@@ -798,5 +806,23 @@ footer .container .footer-links li a {
 
 footer .container .footer-links li a:hover {
   opacity: 0.7;
+}
+
+@-webkit-keyframes aside {
+  from {
+    left: -5%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes aside {
+  from {
+    left: -5%;
+  }
+  to {
+    left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

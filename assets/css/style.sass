@@ -130,6 +130,11 @@ section
     width: 50%
     padding-left: var(--global-padding)
     color: var(--white)
+    left: 0
+    position: relative
+    @extend .transition-4ms
+    animation-name: aside
+    animation-duration: 1s
 
     h1
       font-family: var(--title-font)
@@ -150,6 +155,9 @@ section
       overflow: hidden
       margin: 0 0 32px -80px
       font-family: var(--title-font)
+      @extend .transition-4ms
+      position: relative
+      top: 150px
 
       .icon,
       .information-container
@@ -648,3 +656,12 @@ footer
 
         a:hover
           opacity: 0.7
+
+// Effects
+
+@keyframes aside
+  from
+    left: -5%
+
+  to
+    left: 0
