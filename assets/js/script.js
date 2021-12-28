@@ -102,9 +102,8 @@ window.onscroll = pageAnimation = () => {
 
 // Adding open sidebar menu link
 const openSidebar = () => {
-  const menu = document.querySelector(".twisted-home-menu");
-  $(menu).append(
-    `<li><a class="open-sidebar"><i class="fas fa-bars"></i></a></li>`
+  $("header nav").append(
+    `<a class="open-sidebar"><i class="fas fa-bars"></i></a>`
   );
 
   $("header nav .open-sidebar").click(function (e) {

@@ -92,30 +92,41 @@ header
 
   nav
     text-align: right
+    display: flex
+    align-items: center
 
     ul
       li
         display: inline-flex
         margin-left: 32px
 
-        a.open-sidebar
-          font-size: 20px
+    a.open-sidebar
+      font-size: 20px
+      margin: 0 0 0 32px
 
     ul.twisted-home-menu
       display: flex
       justify-content: center
       align-items: center
 
+      li
+        display: none
+
+      li:nth-child(1),
+      li:nth-child(2)
+        display: inline-flex
+
   #controls
     position: absolute
     display: none
-    background: #1a1a1a
+    background: #141414
     backdrop-filter: blur(2px)
     left: 0
-    width: 65%
+    width: 100%
     // height: 100vh
     top: 0px
-    padding: var(--global-padding)
+    padding: 140px var(--global-padding) var(--global-padding) var(--global-padding)
+    z-index: -1
 
     .twisted-sidebar-menu,
     .searchform
@@ -128,8 +139,11 @@ header
       border-top: 1px solid rgba(255, 255, 255, 0.1)
       padding-top: 40px
       margin: 40px 0 0 0
-      column-count: 2
+      column-count: 4
       column-gap: 20px
+
+      li
+        margin: 0 0 30px 0
 
     .searchform
       div

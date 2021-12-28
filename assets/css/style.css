@@ -110,6 +110,12 @@ header h2 span:after {
 
 header nav {
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav ul li {
@@ -119,8 +125,9 @@ header nav ul li {
   margin-left: 32px;
 }
 
-header nav ul li a.open-sidebar {
+header nav a.open-sidebar {
   font-size: 20px;
+  margin: 0 0 0 32px;
 }
 
 header nav ul.twisted-home-menu {
@@ -135,16 +142,28 @@ header nav ul.twisted-home-menu {
           align-items: center;
 }
 
+header nav ul.twisted-home-menu li {
+  display: none;
+}
+
+header nav ul.twisted-home-menu li:nth-child(1),
+header nav ul.twisted-home-menu li:nth-child(2) {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 header #controls {
   position: absolute;
   display: none;
-  background: #1a1a1a;
+  background: #141414;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   left: 0;
-  width: 65%;
+  width: 100%;
   top: 0px;
-  padding: var(--global-padding);
+  padding: 140px var(--global-padding) var(--global-padding) var(--global-padding);
+  z-index: -1;
 }
 
 header #controls .twisted-sidebar-menu,
@@ -161,10 +180,14 @@ header #controls .twisted-sidebar-menu {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 40px;
   margin: 40px 0 0 0;
-  -webkit-column-count: 2;
-          column-count: 2;
+  -webkit-column-count: 4;
+          column-count: 4;
   -webkit-column-gap: 20px;
           column-gap: 20px;
+}
+
+header #controls .twisted-sidebar-menu li {
+  margin: 0 0 30px 0;
 }
 
 header #controls .searchform div {
