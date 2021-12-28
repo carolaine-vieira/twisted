@@ -116,6 +116,11 @@ header
       li:nth-child(2)
         display: inline-flex
 
+      li.current-menu-item,
+      li.current_page_item
+        font-weight: 600
+        text-decoration: underline
+
   #controls
     position: absolute
     display: none
@@ -144,6 +149,21 @@ header
 
       li
         margin: 0 0 30px 0
+
+      li.current-menu-item,
+      li.current_page_item
+        font-weight: 600
+        font-style: italic
+
+      li.current-menu-item a,
+      li.current_page_item a
+        position: relative
+
+      li.current-menu-item a:before,
+      li.current_page_item a:before
+        content: "/"
+        display: inline-block
+        margin-right: 10px
 
     .searchform
       div

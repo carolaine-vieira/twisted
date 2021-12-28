@@ -153,6 +153,12 @@ header nav ul.twisted-home-menu li:nth-child(2) {
   display: inline-flex;
 }
 
+header nav ul.twisted-home-menu li.current-menu-item,
+header nav ul.twisted-home-menu li.current_page_item {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 header #controls {
   position: absolute;
   display: none;
@@ -188,6 +194,24 @@ header #controls .twisted-sidebar-menu {
 
 header #controls .twisted-sidebar-menu li {
   margin: 0 0 30px 0;
+}
+
+header #controls .twisted-sidebar-menu li.current-menu-item,
+header #controls .twisted-sidebar-menu li.current_page_item {
+  font-weight: 600;
+  font-style: italic;
+}
+
+header #controls .twisted-sidebar-menu li.current-menu-item a,
+header #controls .twisted-sidebar-menu li.current_page_item a {
+  position: relative;
+}
+
+header #controls .twisted-sidebar-menu li.current-menu-item a:before,
+header #controls .twisted-sidebar-menu li.current_page_item a:before {
+  content: "/";
+  display: inline-block;
+  margin-right: 10px;
 }
 
 header #controls .searchform div {
