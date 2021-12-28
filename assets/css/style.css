@@ -159,7 +159,7 @@ header nav ul.twisted-home-menu li.current_page_item {
   text-decoration: underline;
 }
 
-header #controls {
+#controls {
   position: fixed;
   display: none;
   background: #141414;
@@ -170,11 +170,11 @@ header #controls {
   height: 100vh;
   top: 0px;
   padding: 140px var(--global-padding) var(--global-padding) var(--global-padding);
-  z-index: -1;
+  z-index: 99999;
 }
 
-header #controls .twisted-sidebar-menu,
-header #controls .searchform {
+#controls .twisted-sidebar-menu,
+#controls .searchform {
   position: relative;
   left: 0;
   -webkit-animation-name: aside;
@@ -183,7 +183,7 @@ header #controls .searchform {
           animation-duration: 0.8s;
 }
 
-header #controls .twisted-sidebar-menu {
+#controls .twisted-sidebar-menu {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 40px;
   margin: 40px 0 0 0;
@@ -191,43 +191,52 @@ header #controls .twisted-sidebar-menu {
           column-count: 4;
   -webkit-column-gap: 20px;
           column-gap: 20px;
+  font-family: var(--title-font);
 }
 
-header #controls .twisted-sidebar-menu li {
+#controls .twisted-sidebar-menu li {
   margin: 0 0 30px 0;
 }
 
-header #controls .twisted-sidebar-menu li.current-menu-item,
-header #controls .twisted-sidebar-menu li.current_page_item {
+#controls .twisted-sidebar-menu li a {
+  color: var(--white);
+}
+
+#controls .twisted-sidebar-menu li a:hover {
+  text-decoration: underline;
+}
+
+#controls .twisted-sidebar-menu li.current-menu-item,
+#controls .twisted-sidebar-menu li.current_page_item {
   font-weight: 600;
   font-style: italic;
 }
 
-header #controls .twisted-sidebar-menu li.current-menu-item a,
-header #controls .twisted-sidebar-menu li.current_page_item a {
+#controls .twisted-sidebar-menu li.current-menu-item a,
+#controls .twisted-sidebar-menu li.current_page_item a {
   position: relative;
 }
 
-header #controls .twisted-sidebar-menu li.current-menu-item a:before,
-header #controls .twisted-sidebar-menu li.current_page_item a:before {
+#controls .twisted-sidebar-menu li.current-menu-item a:before,
+#controls .twisted-sidebar-menu li.current_page_item a:before {
   content: "/";
   display: inline-block;
   margin-right: 10px;
 }
 
-header #controls .searchform div {
+#controls .searchform div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header #controls .searchform div #s,
-header #controls .searchform div #searchsubmit {
+#controls .searchform div #s,
+#controls .searchform div #searchsubmit {
   outline: none;
   border: none;
 }
 
-header #controls .searchform div #s {
+#controls .searchform div #s {
   background: rgba(255, 255, 255, 0.2);
   color: var(--white);
   border-radius: 2px 0 0 2px;
@@ -235,13 +244,13 @@ header #controls .searchform div #s {
   width: 100%;
 }
 
-header #controls .searchform div #s:focus {
+#controls .searchform div #s:focus {
   background: rgba(255, 255, 255, 0.4);
   outline: 1px solid var(--white);
   outline-offset: -1px;
 }
 
-header #controls .searchform div #searchsubmit {
+#controls .searchform div #searchsubmit {
   border-radius: 0 2px 2px 0;
   background: var(--white);
   color: var(--color-one);
@@ -250,29 +259,31 @@ header #controls .searchform div #searchsubmit {
   font-family: var(--title-font);
 }
 
-header #controls .searchform div #searchsubmit:hover {
+#controls .searchform div #searchsubmit:hover {
   font-weight: 600;
 }
 
-header #controls .searchform div #searchsubmit:focus {
+#controls .searchform div #searchsubmit:focus {
   background: rgba(255, 255, 255, 0.8);
 }
 
-header .sidebar-opened {
+.sidebar-opened {
   display: block !important;
 }
 
 .sdb-open {
   position: fixed;
+  z-index: 999999999 !important;
 }
 
 .sdb-open h2 span:before,
 .sdb-open h2 span:after {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .sdb-open-pd {
   padding-top: 60px !important;
+  background: transparent !important;
 }
 
 header.scrolled {

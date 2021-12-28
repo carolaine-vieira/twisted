@@ -47,18 +47,18 @@
             )
           ); 
         ?>        
-      </nav>
-
-      <div id="controls">
-        <?php 
-          get_search_form();
-
-          wp_nav_menu(
-            array( 
-              'theme_location' => 'header-menu',
-              'menu_class'     => 'twisted-sidebar-menu',
-            )
-          ); 
-        ?>  
-      </div>
+      </nav>      
     </header>
+
+    <div id="controls">
+      <?php 
+        get_search_form();
+
+        wp_nav_menu(
+          array( 
+            'theme_location' => 'header-menu',
+            'menu_class'     => 'twisted-sidebar-menu',
+          )
+        ); 
+      ?>  
+    </div>
