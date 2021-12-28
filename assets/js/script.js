@@ -1,8 +1,9 @@
 $(document).ready(function () {
-  reviesAnimation();
+  reviewsAnimation();
   initMasonry();
   initSlide();
   initAccordion();
+  openSidebar();
 });
 
 // Init masonry elements
@@ -24,7 +25,7 @@ window.onscroll = stickHeader = () => {
     : $("header").removeClass("scrolled");
 };
 
-// Set things to use the slide
+// Set up things to use the slide
 const initSlide = () => {
   const slideContainer = document.querySelectorAll(".slide-container");
   const slides = document.querySelectorAll(".slide-container .slide");
@@ -71,23 +72,23 @@ const initAccordion = () => {
 };
 
 // Reviews animation
-const reviesAnimation = () => {
+const reviewsAnimation = () => {
   const reviews = document.querySelectorAll(".review");
   reviews.forEach((review, index) => {
     setTimeout(() => {
       review.style.top = 0;
-    }, 150 * index);
+    }, 200 * index);
   });
 };
 
 // On scroll page sections animation
 window.onscroll = pageAnimation = () => {
-  const elSelector = "pgScroll";
-  const elements = document.querySelectorAll("." + elSelector);
+  const elSelector = ".pgScroll";
+  const elements = document.querySelectorAll(elSelector);
   const windowOffset = window.pageYOffset;
 
   const offset = (el) => {
-    var rect = el.getBoundingClientRect(),
+    let rect = el.getBoundingClientRect(),
       scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return { top: rect.top + scrollTop };
   };
@@ -95,12 +96,29 @@ window.onscroll = pageAnimation = () => {
   elements.forEach((element) => {
     let elementOffset = offset(element);
 
-    windowOffset >= elementOffset.top - 630
-      ? (element.style.top = 0)
-      : console.log("não");
+    windowOffset >= elementOffset.top - 630 ? (element.style.top = 0) : {};
   });
 };
 
+// Adding open sidebar menu link
+const openSidebar = () => {
+  const menu = document.querySelector(".twisted-home-menu");
+  $(menu).append(
+    `<li><a class="open-sidebar"><i class="fas fa-bars"></i></a></li>`
+  );
+
+  $("header nav .open-sidebar").click(function (e) {
+    e.preventDefault();
+
+    $(".review").toggleClass("hidded");
+
+    const container = document.querySelector("#controls");
+    $(container).toggleClass("sidebar-opened");
+    $(container).css("height", $("#first-section").height());
+  });
+};
+
+// Email return message
 if (window.SimpleForm) {
   new SimpleForm({
     form: ".contact_form", // seletor do formulário

@@ -30,6 +30,13 @@ body
   -o-transition: all 0.4s ease-in-out
   transition: all 0.4s ease-in-out
 
+.transition-3ms
+  -webkit-transition: all 0.3s ease-in-out
+  -moz-transition: all 0.3s ease-in-out
+  -ms-transition: all 0.3s ease-in-out
+  -o-transition: all 0.3s ease-in-out
+  transition: all 0.3s ease-in-out
+
 .pseudo-el
   content: ""
   position: absolute
@@ -37,11 +44,7 @@ body
 .pgScroll
   position: relative
   top: 100px
-  -webkit-transition: all 0.3s ease-in-out
-  -moz-transition: all 0.3s ease-in-out
-  -ms-transition: all 0.3s ease-in-out
-  -o-transition: all 0.3s ease-in-out
-  transition: all 0.3s ease-in-out
+  @extend .transition-3ms
 
 header
   position: absolute
@@ -90,9 +93,81 @@ header
   nav
     text-align: right
 
-    li
-      display: inline-flex
-      margin-left: 32px
+    ul
+      li
+        display: inline-flex
+        margin-left: 32px
+
+        a.open-sidebar
+          font-size: 20px
+
+    ul.twisted-home-menu
+      display: flex
+      justify-content: center
+      align-items: center
+
+  #controls
+    position: absolute
+    display: none
+    background: #1a1a1a
+    backdrop-filter: blur(2px)
+    left: 0
+    width: 65%
+    // height: 100vh
+    top: 0px
+    padding: var(--global-padding)
+
+    .twisted-sidebar-menu,
+    .searchform
+      position: relative
+      left: 0
+      animation-name: aside
+      animation-duration: 0.8s
+
+    .twisted-sidebar-menu
+      border-top: 1px solid rgba(255, 255, 255, 0.1)
+      padding-top: 40px
+      margin: 40px 0 0 0
+      column-count: 2
+      column-gap: 20px
+
+    .searchform
+      div
+        display: flex
+
+        #s,
+        #searchsubmit
+          outline: none
+          border: none
+
+        #s
+          background: rgba(255, 255, 255, 0.2)
+          color: var(--white)
+          border-radius: 2px 0 0 2px
+          padding: 10px 15px
+          width: 100%
+
+        #s:focus
+          background: rgba(255, 255, 255, 0.4)
+          outline: 1px solid var(--white)
+          outline-offset: -1px
+
+        #searchsubmit
+          border-radius: 0 2px 2px 0
+          background: var(--white)
+          color: var(--color-one)
+          padding: 0 20px
+          cursor: pointer
+          font-family: var(--title-font)
+
+        #searchsubmit:hover
+          font-weight: 600
+
+        #searchsubmit:focus
+          background: rgba(255, 255, 255, 0.8)
+
+  .sidebar-opened
+    display: block !important
 
 header.scrolled
   backdrop-filter: blur(2px)
@@ -168,7 +243,7 @@ section
       overflow: hidden
       margin: 0 0 32px -80px
       font-family: var(--title-font)
-      @extend .transition-4ms
+      @extend .transition-3ms
       position: relative
       top: 150px
 
@@ -207,6 +282,9 @@ section
           color: #E1C323
           letter-spacing: 3px
           margin-top: 5px
+
+    .hidded
+      opacity: 0
 
 #first-section:after
   @extend .pseudo-el
@@ -669,6 +747,27 @@ footer
 
         a:hover
           opacity: 0.7
+
+// 404 page
+#twisted-error404
+
+  #error404-message
+    min-height: unset
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: calc(var(--global-padding) * 2)
+    color: var(--white)
+    font-family: var(--title-font)
+    font-size: 20px
+
+    i
+      font-size: 50px
+      display: block
+
+    h3
+      font-weight: 400
+      margin: 30px 0 0 0
 
 // Effects
 
