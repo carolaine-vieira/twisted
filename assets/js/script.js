@@ -16,7 +16,7 @@ const initMasonry = () => {
 };
 
 // Change style of header
-window.onscroll = myFunction = () => {
+window.onscroll = stickHeader = () => {
   const windowOffset = window.pageYOffset;
 
   windowOffset >= 500
@@ -77,6 +77,27 @@ const reviesAnimation = () => {
     setTimeout(() => {
       review.style.top = 0;
     }, 150 * index);
+  });
+};
+
+// On scroll page sections animation
+window.onscroll = pageAnimation = () => {
+  const elSelector = "pgScroll";
+  const elements = document.querySelectorAll("." + elSelector);
+  const windowOffset = window.pageYOffset;
+
+  const offset = (el) => {
+    var rect = el.getBoundingClientRect(),
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop };
+  };
+
+  elements.forEach((element) => {
+    let elementOffset = offset(element);
+
+    windowOffset >= elementOffset.top - 600
+      ? (element.style.top = 0)
+      : console.log("não");
   });
 };
 

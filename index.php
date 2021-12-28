@@ -60,7 +60,7 @@
     </section>
 
     <section id="posts">
-      <div id="posts-container" class="grid">
+      <div id="posts-container" class="grid pgScroll">
         <?php
           $args = array(
             'posts_per_page' => 15,
@@ -84,7 +84,7 @@
       <!-- <div class="read-more">Load More Posts</div> -->
     </section>
 
-    <section id="testimonial">
+    <section id="testimonial" class="pgScroll">
       <div class="slide-container">
         <?php
           $args = array(

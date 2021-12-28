@@ -39,6 +39,13 @@ header h2 span:after, #first-section:after {
   position: absolute;
 }
 
+.pgScroll {
+  position: relative;
+  top: 100px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 header {
   position: absolute;
   width: 100%;
