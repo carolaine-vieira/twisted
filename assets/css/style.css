@@ -266,6 +266,11 @@ header .sidebar-opened {
   position: fixed;
 }
 
+.sdb-open h2 span:before,
+.sdb-open h2 span:after {
+  display: inline-block;
+}
+
 .sdb-open-pd {
   padding-top: 70px !important;
 }

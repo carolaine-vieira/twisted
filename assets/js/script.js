@@ -104,6 +104,8 @@ window.onscroll = pageAnimation = () => {
 
 // Adding open sidebar menu link
 const openSidebar = () => {
+  const root = $(":root");
+
   $("header nav").append(
     `<a class="open-sidebar"><i class="fas fa-bars"></i></a>`
   );
@@ -113,12 +115,21 @@ const openSidebar = () => {
 
     $(".review").toggleClass("hidded");
     $("header").toggleClass("sdb-open");
+
+    $("header nav .open-sidebar").addClass("close-sidebar-button");
     $("header").hasClass("scrolled")
       ? $("header").toggleClass("sdb-open-pd")
       : {};
 
     const container = document.querySelector("#controls");
     $(container).toggleClass("sidebar-opened");
+  });
+
+  $(".close-sidebar-button").click(function (e) {
+    e.preventDefault();
+    console.log("teste");
+    $("header").css("padding-top", root.css("--global-padding"));
+    $("header nav .open-sidebar").removeClass("close-sidebar-button");
   });
 };
 
