@@ -160,13 +160,14 @@ header nav ul.twisted-home-menu li.current_page_item {
 }
 
 header #controls {
-  position: absolute;
+  position: fixed;
   display: none;
   background: #141414;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   left: 0;
   width: 100%;
+  height: 100vh;
   top: 0px;
   padding: 140px var(--global-padding) var(--global-padding) var(--global-padding);
   z-index: -1;
@@ -230,7 +231,7 @@ header #controls .searchform div #s {
   background: rgba(255, 255, 255, 0.2);
   color: var(--white);
   border-radius: 2px 0 0 2px;
-  padding: 10px 15px;
+  padding: 11px 15px;
   width: 100%;
 }
 
@@ -259,6 +260,14 @@ header #controls .searchform div #searchsubmit:focus {
 
 header .sidebar-opened {
   display: block !important;
+}
+
+.sdb-open {
+  position: fixed;
+}
+
+.sdb-open-pd {
+  padding-top: 70px !important;
 }
 
 header.scrolled {

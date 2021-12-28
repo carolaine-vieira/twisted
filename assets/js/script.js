@@ -1,5 +1,6 @@
 $(document).ready(function () {
   reviewsAnimation();
+  //stickHeader();
   initMasonry();
   initSlide();
   initAccordion();
@@ -17,13 +18,14 @@ const initMasonry = () => {
 };
 
 // Change style of header
-window.onscroll = stickHeader = () => {
-  const windowOffset = window.pageYOffset;
-
-  windowOffset >= 500
-    ? $("header").addClass("scrolled")
-    : $("header").removeClass("scrolled");
-};
+$(window).scroll(
+  (stickHeader = () => {
+    const windowPos = window.pageYOffset;
+    windowPos >= 500
+      ? $("header").addClass("scrolled")
+      : $("header").removeClass("scrolled");
+  })
+);
 
 // Set up things to use the slide
 const initSlide = () => {
@@ -110,10 +112,13 @@ const openSidebar = () => {
     e.preventDefault();
 
     $(".review").toggleClass("hidded");
+    $("header").toggleClass("sdb-open");
+    $("header").hasClass("scrolled")
+      ? $("header").toggleClass("sdb-open-pd")
+      : {};
 
     const container = document.querySelector("#controls");
     $(container).toggleClass("sidebar-opened");
-    $(container).css("height", $("#first-section").height());
   });
 };
 

@@ -122,13 +122,13 @@ header
         text-decoration: underline
 
   #controls
-    position: absolute
+    position: fixed
     display: none
     background: #141414
     backdrop-filter: blur(2px)
     left: 0
     width: 100%
-    // height: 100vh
+    height: 100vh
     top: 0px
     padding: 140px var(--global-padding) var(--global-padding) var(--global-padding)
     z-index: -1
@@ -178,7 +178,7 @@ header
           background: rgba(255, 255, 255, 0.2)
           color: var(--white)
           border-radius: 2px 0 0 2px
-          padding: 10px 15px
+          padding: 11px 15px
           width: 100%
 
         #s:focus
@@ -202,6 +202,12 @@ header
 
   .sidebar-opened
     display: block !important
+
+.sdb-open
+  position: fixed
+
+.sdb-open-pd
+  padding-top: 70px !important
 
 header.scrolled
   backdrop-filter: blur(2px)
