@@ -95,7 +95,7 @@ window.onscroll = pageAnimation = () => {
   elements.forEach((element) => {
     let elementOffset = offset(element);
 
-    windowOffset >= elementOffset.top - 600
+    windowOffset >= elementOffset.top - 630
       ? (element.style.top = 0)
       : console.log("não");
   });

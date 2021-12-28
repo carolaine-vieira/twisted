@@ -16,6 +16,7 @@
 
 body {
   font-family: var(--default-font);
+  background: var(--color-one);
 }
 
 body a,
@@ -28,7 +29,8 @@ body li {
   list-style: none;
 }
 
-.transition-4ms, header, header.scrolled, #first-section .left-container, #first-section .right-container .review, #testimonial .slide-container .slide, #testimonial .slide-container .active {
+.transition-4ms, header, header.scrolled, #first-section .left-container h1,
+#first-section .left-container .description, #first-section .right-container .review, #testimonial .slide-container .slide, #testimonial .slide-container .active {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -170,6 +172,10 @@ section {
   width: 50%;
   padding-left: var(--global-padding);
   color: var(--white);
+}
+
+#first-section .left-container h1,
+#first-section .left-container .description {
   left: 0;
   position: relative;
   -webkit-animation-name: aside;
@@ -431,7 +437,7 @@ section {
 
 #contact .left-container {
   width: 40%;
-  padding: calc(var(--global-padding) + 40px) var(--global-padding);
+  padding: calc(var(--global-padding) + 30px) var(--global-padding) calc(var(--global-padding) + 40px) var(--global-padding);
   background: rgba(255, 255, 255, 0.1);
   font-family: var(--title-font);
   font-size: 45px;

@@ -13,6 +13,7 @@
 
 body
   font-family: var(--default-font)
+  background: var(--color-one)
 
   a,
   a:hover
@@ -139,11 +140,14 @@ section
     width: 50%
     padding-left: var(--global-padding)
     color: var(--white)
-    left: 0
-    position: relative
-    @extend .transition-4ms
-    animation-name: aside
-    animation-duration: 1s
+
+    h1,
+    .description
+      left: 0
+      position: relative
+      @extend .transition-4ms
+      animation-name: aside
+      animation-duration: 1s
 
     h1
       font-family: var(--title-font)
@@ -348,7 +352,7 @@ section
 
   .left-container
     width: 40%
-    padding: calc(var(--global-padding) + 40px) var(--global-padding)
+    padding: calc(var(--global-padding) + 30px) var(--global-padding) calc(var(--global-padding) + 40px) var(--global-padding)
     background: rgba(255, 255, 255, 0.1)
     font-family: var(--title-font)
     font-size: 45px

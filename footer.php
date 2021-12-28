@@ -1,5 +1,5 @@
     
-    <section id="contact">
+    <section id="contact" class="pgScroll">
       <div class="left-container">
         <b>Liked our work?</b>
         <i>Send an email to contact us!</i>

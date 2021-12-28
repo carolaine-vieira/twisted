@@ -98,7 +98,7 @@
         </div> <!-- End of #post-options -->
       </section>
 
-      <div class="comments-box">
+      <div class="comments-box pgScroll">
         <div id="scroll-comment"></div>
         <?php
           if (comments_open() || get_comments_number()) :

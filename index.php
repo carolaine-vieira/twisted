@@ -20,8 +20,6 @@
           Perferendis tempore asperiores, magni placeat explicabo excepturi
           aperiam unde nobis minima temporibus commodi.
         </div>
-
-        
       </div>
 
       <div class="right-container">
@@ -84,7 +82,7 @@
       <!-- <div class="read-more">Load More Posts</div> -->
     </section>
 
-    <section id="testimonial" class="pgScroll">
+    <section id="testimonial">
       <div class="slide-container">
         <?php
           $args = array(
