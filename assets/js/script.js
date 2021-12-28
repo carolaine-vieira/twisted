@@ -117,19 +117,10 @@ const openSidebar = () => {
     $("header").toggleClass("sdb-open");
 
     $("header nav .open-sidebar").addClass("close-sidebar-button");
-    $("header").hasClass("scrolled")
-      ? $("header").toggleClass("sdb-open-pd")
-      : {};
+    $("header").toggleClass("sdb-open-pd");
 
     const container = document.querySelector("#controls");
     $(container).toggleClass("sidebar-opened");
-  });
-
-  $(".close-sidebar-button").click(function (e) {
-    e.preventDefault();
-    console.log("teste");
-    $("header").css("padding-top", root.css("--global-padding"));
-    $("header nav .open-sidebar").removeClass("close-sidebar-button");
   });
 };
 
