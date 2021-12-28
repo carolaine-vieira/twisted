@@ -6,27 +6,31 @@
       </div>
 
       <div class="right-container">
-        <label for="inpt_name">Name</label>
-        <input type="text" name="inpt_name" id="" placeholder="Gisele Mattos" />
+        <form action="enviar.php" method="post" class="contact_form">
+          <label for="inpt_name">Name</label>
+          <input type="text" name="inpt_name" id="inpt_name" placeholder="Gisele Mattos" required />
 
-        <label for="inpt_email">Email</label>
-        <input
-          type="email"
-          name="inpt_email"
-          id=""
-          placeholder="gisele.mattos@gmail.com"
-        />
+          <label for="inpt_email">Email</label>
+          <input
+            type="email"
+            name="inpt_email"
+            id="inpt_email"
+            placeholder="gisele.mattos@gmail.com"
+            required
+          />
 
-        <label for="inpt_message">Message</label>
-        <textarea
-          name="inpt_message"
-          id="message"
-          cols="30"
-          rows="4"
-          placeholder="Your message"
-        ></textarea>
+          <label for="inpt_message">Message</label>
+          <textarea
+            name="inpt_message"
+            id="message"
+            cols="30"
+            rows="4"
+            placeholder="Your message"
+            required
+          ></textarea>
 
-        <input type="submit" value="Send">
+          <button type="submit" id="send_btn">Send message</button>
+        </form>
       </div>
     </section>
     

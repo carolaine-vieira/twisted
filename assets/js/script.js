@@ -68,3 +68,13 @@ const initAccordion = () => {
     });
   });
 };
+
+if (window.SimpleForm) {
+  new SimpleForm({
+    form: ".contact_form", // seletor do formulário
+    button: "#send_btn", // seletor do botão
+    erro: "<div id='form-erro'><h2>Erro no envio!</h2><p>Um erro ocorreu, tente para o email s.carolaine.v@gmail.com</p></div>", // mensagem de erro
+    sucesso:
+      "<div id='form-sucesso'><h2>Formulário enviado com sucesso</h2><p>Em breve eu entro em contato com você.</p></div>", // mensagem de sucesso
+  });
+}
