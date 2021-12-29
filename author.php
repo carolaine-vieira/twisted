@@ -57,9 +57,10 @@
       <?php
         echo paginate_links(
             array(
-              'current'=> max(1, get_query_var('paged')),
-              'total' => $query -> max_num_pages,
-              'mid_size' => 2
+              // 'format'    => '?page=%#%',
+              'current'   => max(1, get_query_var('paged')),
+              'total'     => $query -> max_num_pages,
+              'mid_size'  => 2
           )
         );
       ?>

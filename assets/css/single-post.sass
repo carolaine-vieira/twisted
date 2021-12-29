@@ -267,3 +267,48 @@
 
     .description
       opacity: 0.8
+
+  // Tablet
+@media only screen and (max-width: 800px)
+  #twisted-single-post
+    #posts
+      .post-container
+        .post-single
+          padding: var(--global-padding)
+
+      #post-options
+        padding: 20px 0 0 20px
+        font-size: 13px
+
+        .category
+          margin: -60px 0 0 0
+
+    .comments-box
+      #respond
+        padding: 0
+
+// Phone
+@media only screen and (max-width: 500px)
+  #twisted-single-post
+    #posts
+      display: block
+
+      .post-container
+        width: calc(100% - var(--global-padding)) !important
+
+        .post-single
+          padding: var(--global-padding)
+
+      #post-options
+        padding: 0 calc( var(--global-padding) * 2) var(--global-padding) calc( var(--global-padding) * 2)
+        font-size: 16px
+        width: 100%
+        margin: -30px 0 40px 0
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+        .category
+          display: none
+
+    .comments-box
+      #respond
+        padding: 0

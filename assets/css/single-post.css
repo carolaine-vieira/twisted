@@ -312,4 +312,45 @@
 #twisted-single-post #first-section .description {
   opacity: 0.8;
 }
+
+@media only screen and (max-width: 800px) {
+  #twisted-single-post #posts .post-container .post-single {
+    padding: var(--global-padding);
+  }
+  #twisted-single-post #posts #post-options {
+    padding: 20px 0 0 20px;
+    font-size: 13px;
+  }
+  #twisted-single-post #posts #post-options .category {
+    margin: -60px 0 0 0;
+  }
+  #twisted-single-post .comments-box #respond {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #twisted-single-post #posts {
+    display: block;
+  }
+  #twisted-single-post #posts .post-container {
+    width: calc(100% - var(--global-padding)) !important;
+  }
+  #twisted-single-post #posts .post-container .post-single {
+    padding: var(--global-padding);
+  }
+  #twisted-single-post #posts #post-options {
+    padding: 0 calc( var(--global-padding) * 2) var(--global-padding) calc( var(--global-padding) * 2);
+    font-size: 16px;
+    width: 100%;
+    margin: -30px 0 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  #twisted-single-post #posts #post-options .category {
+    display: none;
+  }
+  #twisted-single-post .comments-box #respond {
+    padding: 0;
+  }
+}
 /*# sourceMappingURL=single-post.css.map */
