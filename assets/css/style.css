@@ -30,7 +30,7 @@ body li {
 }
 
 .transition-4ms, header, header.scrolled, #first-section .left-container h1,
-#first-section .left-container .description, #testimonial .slide-container .slide, #testimonial .slide-container .active {
+#first-section .left-container .description, #testimonial .slide-container .slide, #testimonial .slide-container .active, #twiste-minimal-template .container .info .blog-link a:after {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -1068,7 +1068,7 @@ footer .container .footer-links li a:hover {
 #twiste-minimal-template .container .info .blog-link {
   font-weight: 300;
   font-size: 20px;
-  height: calc(100% - 50px);
+  height: calc(100% - var(--global-padding) - 30px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1081,6 +1081,56 @@ footer .container .footer-links li a:hover {
 }
 
 #twiste-minimal-template .container .info .blog-link a {
+  color: var(--white);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#twiste-minimal-template .container .info .blog-link a:after {
+  right: -20px;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
+  position: absolute;
+  opacity: 0;
+}
+
+#twiste-minimal-template .container .info .blog-link a:hover {
+  font-weight: 600;
+}
+
+#twiste-minimal-template .container .info .blog-link a:hover:after {
+  opacity: 1;
+  right: -30px;
+}
+
+#twiste-minimal-template .social-links {
+  position: absolute;
+  bottom: var(--global-padding);
+  width: 100%;
+}
+
+#twiste-minimal-template .social-links ul {
+  font-size: 25px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#twiste-minimal-template .social-links ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+#twiste-minimal-template .social-links ul li a {
   color: var(--white);
 }
 

@@ -859,10 +859,50 @@ footer
       .blog-link
         font-weight: 300
         font-size: 20px
-        height: calc(100% - 50px)
+        height: calc(100% - var(--global-padding) - 30px)
         display: flex
         align-items: flex-end
         justify-content: center
+
+        a
+          color: var(--white)
+          position: relative
+          display: flex
+          align-items: center
+
+        a:after
+          right: -20px
+          font-style: normal
+          font-variant: normal
+          text-rendering: auto
+          -webkit-font-smoothing: antialiased
+          font-family: "Font Awesome 5 Free"
+          font-weight: 900
+          content: "\f054"
+          position: absolute
+          opacity: 0
+          @extend .transition-4ms
+
+        a:hover
+          font-weight: 600
+
+        a:hover:after
+          opacity: 1
+          right: -30px
+
+  .social-links
+    position: absolute
+    bottom: var(--global-padding)
+    width: 100%
+
+    ul
+      font-size: 25px
+      text-align: center
+      margin: 0 auto
+
+      li
+        display: inline-block
+        margin: 0 6px
 
         a
           color: var(--white)
