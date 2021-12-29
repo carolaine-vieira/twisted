@@ -125,9 +125,31 @@ header nav ul li {
   margin-left: 32px;
 }
 
-header nav a.open-sidebar {
+header nav a.sidebar-button {
   font-size: 20px;
   margin: 0 0 0 32px;
+  position: relative;
+  text-decoration: none;
+}
+
+header nav a.open-sidebar:before {
+  content: "\f0c9";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+header nav a.close-sidebar:before {
+  content: "\f00d";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 header nav ul.twisted-home-menu {

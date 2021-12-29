@@ -107,17 +107,16 @@ window.onscroll = pageAnimation = () => {
 const openSidebar = () => {
   const root = $(":root");
 
-  $("header nav").append(
-    `<a class="open-sidebar"><i class="fas fa-bars"></i></a>`
-  );
+  $("header nav").append(`<a class="sidebar-button open-sidebar"></a>`);
 
-  $("header nav .open-sidebar").click(function (e) {
+  $("header nav .sidebar-button").click(function (e) {
     e.preventDefault();
 
     $(".review").toggleClass("hidded");
     $("header").toggleClass("sdb-open");
 
-    $("header nav .open-sidebar").addClass("close-sidebar-button");
+    $("header nav .sidebar-button").toggleClass("open-sidebar");
+    $("header nav .sidebar-button").toggleClass("close-sidebar");
     $("header").toggleClass("sdb-open-pd");
 
     const container = document.querySelector("#controls");
