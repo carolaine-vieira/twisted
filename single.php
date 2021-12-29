@@ -91,12 +91,12 @@
           <div class="permalink-navigation">
             <?php
               the_post_navigation(array(
-                'next_text' => '' . __('<b>Next:</b> ', 'twentyfifteen') . '</span> ' .
-                    '<span class="screen-reader-text">' . __('Next post:', 'twentyfifteen') . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                    
                 'prev_text' => '' . __('<b>Previous:</b> ', 'twentyfifteen') . '</span> ' .
                     '<span class="screen-reader-text">' . __('Previous post:', 'twentyfifteen') . '</span> ' .
+                    '<span class="post-title">%title</span>',
+                    
+                'next_text' => '' . __('<b>Next:</b> ', 'twentyfifteen') . '</span> ' .
+                    '<span class="screen-reader-text">' . __('Next post:', 'twentyfifteen') . '</span> ' .
                     '<span class="post-title">%title</span>',
               ));
             ?>

@@ -364,7 +364,6 @@ section
 
     .post
       width: calc( 100vw / 4 - 40px )
-      height: 15vw
       background: var(--white)
       overflow: hidden
       object-fit: cover
@@ -574,61 +573,94 @@ section
   color: #fff
   padding: 10px var(--global-padding) calc(var(--global-padding) + 20px) var(--global-padding)
 
-.comments-box a:hover
-  color: #fff
+  a
+    color: var(--color-one)
 
-.comments-box h3
-  color: var(--white)
-  font-family: var(--title-font)
-  font-size: 18px
-  font-weight: 400
-  padding-bottom: 20px
+  a:hover
+    color: #fff
 
-  .comments-title
-    margin-bottom: 20px
+  h3
+    color: var(--white)
+    font-family: var(--title-font)
+    font-size: 18px
+    font-weight: 400
+    padding-bottom: 20px
 
-.comments-box label
-  display: block
+    .comments-title
+      margin-bottom: 20px
 
-  .wp-comment-cookies-consent
+  label
+    display: block
+    font-family: var(--title-font)
+    margin: 10px 0 5px 0
+
+  label[for="wp-comment-cookies-consent"]
+    margin: 0 0 0 10px
+
+  .comment-notes
+    opacity: 0.8
+
+  .comment-notes,
+  p.logged-in-as
+    font-style: italic
+    margin-bottom: 25px
+
+  #email-notes
     display: inline-block
+    margin: 0 5px 0 0
+
+  #reply-title
+    font-weight: 600
+
+  input[type="checkbox"]
     width: auto
+    display: inline-block
+    outline: none
 
-.comments-box input[type="checkbox"]
-  width: auto
-  display: inline-block
+  .form-submit
+    margin: 30px 0 0 0
 
-.comments-box .comment-notes,
-.comments-box p.logged-in-as
-  font-style: italic
-  margin-bottom: 25px
+  .comment-form-cookies-consent
+    margin: 10px 0 0 0
+    display: flex
+    align-items: center
 
-.comments-box textarea,
-.comments-box input
-  background: rgba(255, 255, 255, 0.1)
-  border: 1px solid rgba(255, 255, 255, 0.2)
-  color: #fff
-  width: 100%
-  padding: 5px 10px
+  textarea,
+  input
+    background: rgba(255, 255, 255, 0.1)
+    color: #fff
+    width: 100%
+    padding: 12px
+    border-radius: 2px
+    border: none
+    font-family: var(--default-font)
+    font-size: 15px
 
-.comments-box textarea:focus,
-.comments-box input:focus
-  outline: 2px solid var(--white)
-  outline-offset: -1px
+  textarea
+    resize: vertical
+    height: 100px
 
-.comments-box input[type="submit"]
-  background: var(--white)
-  text-transform: uppercase
-  font-weight: 600
-  border-color: var(--white)
-  padding: 10px
+  textarea:focus,
+  input:focus
+    outline: 1px solid var(--white)
+    outline-offset: -1px
 
-.comments-box input[type="submit"]:focus
-  text-decoration: line-through
-  -webkit-box-shadow: inset 0 -100px 0 0 rgba(0, 0, 0, 0.2)
-  box-shadow: inset 0 -100px 0 0 rgba(0, 0, 0, 0.2)
+  input[type="submit"]
+    background: rgba(255, 255, 255, 0.3)
+    border-color: var(--white)
+    padding: 15px
+    font-family: var(--title-font)
+    font-size: 16px
+    cursor: pointer
 
-.comments-box
+  input[type="submit"]:focus
+    outline: none
+    text-decoration: underline
+    background: rgba(255, 255, 255, 0.3)
+
+  input[type="checkbox"]:focus
+    outline: none
+
   ol.commentlist
     margin: 0 0 30px 0
     padding: 0 0 10px 0
@@ -638,10 +670,12 @@ section
       list-style: none
 
       p
-        padding: 10px 10px 0 10px
+        padding: 10px 20px 0 20px
         text-align: justify
 
-.comments-box
+        a
+          border-bottom: 1px dotted
+
   .comment-body
     margin-bottom: 30px
     background: var(--white)
@@ -650,77 +684,67 @@ section
     a:hover
       color: var(--color-one)
 
-.comments-box
-  .comment-author
-    position: relative
-    overflow: hidden
-
-.comments-box
   cite.fn
     a
       color: var(--color-one)
 
-.comments-box
-  cite.fn,
   span.says
     margin-left: 10px
 
-.comments-box
   .comment-author
     display: flex
     align-items: center
-    padding: 10px
+    padding: 20px
     font-weight: 600
     font-family: var(--title-font)
+    position: relative
+    overflow: hidden
+    font-size: 17px
 
     img
-      max-width: 60px
-      height: auto
-      border-radius: 100%
+      display: none
 
-.comments-box
+    a
+      text-transform: capitalize
+
+  em.comment-awaiting-moderation
+    margin: -17px 0 5px 20px
+    display: block
+
   ul.children
     li
       margin-left: 20px
 
       .comment-body
-        background: rgba(255, 255, 255, 0.1)
-        color: var(--white)
+        background: rgba(255, 255, 255, 0.9)
 
-      .comment-author img
-        max-width: 45px !important
-        border-radius: 100%
-
-.comments-box
-  ul.children .comment-author:before
-    left: 40px
-
-.comments-box
   .comment-meta.commentmetadata
-    padding: 0 10px 10px 10px
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-    margin: -5px 0 0 0
+    padding: 0 20px 10px 20px
+    margin: -15px 0 0 0
+    font-family: var(--title-font)
+    font-weight: 500
+    font-size: 14px
 
     a
       color: var(--color-one)
 
-.comments-box
   .reply
-    margin: 10px 0 0 0
+    margin: 0px 0 0 0
     display: block
-    padding: 10px
-    text-transform: uppercase
-    font-size: 13px
-    font-weight: 600
-    border-top: 1px solid #eee
+    padding: 20px
+    font-family: var(--title-font)
+    font-weight: 500
+    font-size: 14px
 
-.comments-box
   a#cancel-comment-reply-link
     display: block
+    color: var(--white)
+    margin: 10px 0 0 0
 
-.comments-box
   #respond
     padding: 0 15%
+
+// author pagee
 
 .author-page
   min-height: unset
