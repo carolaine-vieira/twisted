@@ -29,26 +29,25 @@
             'order'   => 'ASC',
             'posts_per_page' => 3
           );
-
           $query = new WP_Query($args);
 
           while ($query -> have_posts()) :
-                  $query -> the_post();
+            $query -> the_post();
         ?>
-                    <div class="review">
-                      <div class="icon">
-                        <img
-                          src="<?php echo the_field('testimonial_icon_image'); ?>"
-                          alt="<?php the_field('testimonial_alternative_title_icon'); ?>"
-                        />
-                      </div>
-                      <div class="information-container">
-                        <div class="information">
-                          <p><b><?php the_field('testimonial_name'); ?></b> &mdash; <?php the_field('testimonial_product_type'); ?></p>
-                          <div class="star-rate"></div>
-                        </div>
-                      </div>
-                    </div>
+            <div class="review">
+              <div class="icon">
+                <img
+                  src="<?php echo the_field('testimonial_icon_image'); ?>"
+                  alt="<?php the_field('testimonial_alternative_title_icon'); ?>"
+                />
+              </div>
+              <div class="information-container">
+                <div class="information">
+                  <p><b><?php the_field('testimonial_name'); ?></b> &mdash; <?php the_field('testimonial_product_type'); ?></p>
+                  <div class="star-rate"></div>
+                </div>
+              </div>
+            </div>
         <?php
           endwhile;
 
@@ -90,7 +89,6 @@
             'order'   => 'ASC',
             'posts_per_page' => 6
           );
-
           $query = new WP_Query($args);
 
           while ($query -> have_posts()) :

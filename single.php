@@ -56,11 +56,16 @@
                 <span class="title">Posted on: </span>
                 <?php the_date(); ?>
               </div>
+              <?php 
+                if(has_tag()) {
+              ?>
               <div class="post-tags">
-                <span class="title">Tags: </span>
-                <?php the_tags(""); ?> 
-                <!-- , "<span>/</span>" -->
+                <span class="title">Tags: </span>                
+                <?php the_tags(""); ?>
               </div>
+              <?php
+                } 
+              ?> 
               <div class="post-shortlink">
                 <span class="title">Short URL: </span>
                 <span class="short"><?php echo wp_get_shortlink(); ?></span>
@@ -70,14 +75,15 @@
 
           <div class="item">
             <div class="item-title">Comments</div>
-            <div class="item-content">
-              <a href="#scroll-comment">See comments</a>
+            <div class="item-content comments">
+              <span class="title"><?php comments_number() ?></span>
+              <a href="#scroll-comment">Write a response</a>
             </div>
           </div>
 
           <div class="item">
-            <div class="item-title">Author Info</div>
-            <div class="item-content">
+            <div class="item-title">Author</div>
+            <div class="item-content author">
             <?php the_author_posts_link(); ?>
             </div>
           </div>

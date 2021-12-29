@@ -13,6 +13,7 @@ const initMasonry = () => {
     $(".grid").masonry({
       isFitWidth: true,
       itemSelector: ".grid-item",
+      gutter: 10,
     });
   });
 };
