@@ -19,14 +19,16 @@
 
 #twisted-page #posts .post-container .post-single {
   background: var(--white);
-  margin: 0 var(--global-padding) 0 0;
   padding: 40px;
   line-height: 1.6em;
+  margin: 0 0 -100px 0;
 }
 
 #twisted-page #posts .post-container .post-single h3 {
   font-family: var(--title-font);
   font-size: 30px;
+  text-align: center;
+  min-height: unset;
 }
 
 #twisted-page #posts .post-container .post-single h3 span {
@@ -256,15 +258,6 @@
   position: relative;
   z-index: 1;
   top: -120px;
-}
-
-#twisted-page #posts .type-page .post-single {
-  margin: 0;
-}
-
-#twisted-page #posts .type-page .post-single h3 {
-  text-align: center;
-  min-height: unset;
 }
 
 #twisted-page #first-section {
