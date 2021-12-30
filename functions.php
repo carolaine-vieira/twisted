@@ -18,7 +18,7 @@ if( !function_exists('twisted_setup') ) {
     add_theme_support('post-formats', array('image'));
     add_theme_support( 'editor-styles' );
 
-    // Custom header menu
+    // Custom header image
     $args = array(
       'flex-width'    => true,
       'width'         => 1500,
