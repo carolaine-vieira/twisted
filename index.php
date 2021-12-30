@@ -13,12 +13,8 @@
       </div>
 
       <div class="left-container">
-        <h1><?php 
-              if (the_field('blog_first_section_title')) {
-                
-              } else {
+        <h1><?php
                 bloginfo( 'name' );
-              }
             ?></h1>
         <div class="description">
           <?php the_field('intro_blog_title'); ?>
@@ -67,13 +63,14 @@
       <div id="posts-container" class="grid pgScroll">
         <?php
           $args = array(
-            'posts_per_page' => 15,
+            'post_type' => 'post',
+            'posts_per_page' => 10,
           );
           $the_query = new WP_Query($args);
           
-          if ($the_query->have_posts()) :
-            while ($the_query->have_posts()) :
-              $the_query->the_post();
+          if ( $the_query -> have_posts() ) :
+            while ( $the_query -> have_posts() ) :
+              $the_query -> the_post();
               the_post();
               get_template_part('template-parts/content/content', get_post_format());
             endwhile;
