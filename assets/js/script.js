@@ -1,6 +1,5 @@
 $(document).ready(function () {
   reviewsAnimation();
-  //stickHeader();
   initMasonry();
   initSlide();
   initAccordion();
@@ -9,13 +8,15 @@ $(document).ready(function () {
 
 // Init masonry elements
 const initMasonry = () => {
-  $(function () {
-    $(".grid").masonry({
-      isFitWidth: true,
-      itemSelector: ".grid-item",
-      gutter: 10,
+  setTimeout(() => {
+    $(function () {
+      $(".grid").masonry({
+        isFitWidth: true,
+        itemSelector: ".grid-item",
+        gutter: 10,
+      });
     });
-  });
+  }, 500);
 };
 
 // Change style of header
@@ -25,6 +26,26 @@ $(window).scroll(
     windowPos >= 500
       ? $("header").addClass("scrolled")
       : $("header").removeClass("scrolled");
+  })
+);
+
+// Scroll to top
+$(window).scroll(
+  (scrollTop = () => {
+    const windowPos = window.pageYOffset;
+    if (windowPos >= 500) {
+      $("#scroll-top").show();
+
+      $("#scroll-top").click(function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    } else {
+      $("#scroll-top").hide();
+    }
   })
 );
 

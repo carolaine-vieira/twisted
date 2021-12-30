@@ -784,6 +784,10 @@ section {
   margin-bottom: 25px;
 }
 
+.comments-box p.logged-in-as a {
+  color: var(--white);
+}
+
 .comments-box #email-notes {
   display: inline-block;
   margin: 0 5px 0 0;
@@ -938,6 +942,8 @@ section {
 
 .comments-box .comment-meta.commentmetadata a {
   color: var(--color-one);
+  position: relative;
+  z-index: 1;
 }
 
 .comments-box .reply {
@@ -1063,6 +1069,24 @@ footer .container .footer-links li a:hover {
   opacity: 0.7;
 }
 
+#scroll-top {
+  position: fixed;
+  z-index: 5;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  color: var(--white);
+  background: var(--color-one);
+  padding: 15px 20px;
+  -webkit-box-shadow: inset 50px 50px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: inset 50px 50px 0 rgba(0, 0, 0, 0.4);
+  -webkit-animation-name: scrolltop;
+          animation-name: scrolltop;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  border-radius: 2px;
+}
+
 #twisted-error404 #error404-message {
   min-height: unset;
   -webkit-box-pack: center;
@@ -1095,6 +1119,7 @@ footer .container .footer-links li a:hover {
 
 #twiste-minimal-template .container {
   background: rgba(255, 255, 255, 0.2);
+  background-size: cover;
   -webkit-backdrop-filter: blur(2px) grayscale(100%);
           backdrop-filter: blur(2px) grayscale(100%);
   position: absolute;
@@ -1202,6 +1227,10 @@ footer .container .footer-links li a:hover {
   color: var(--white);
 }
 
+.twisted-config-page {
+  background: url("../images/twisted-config-page.jpg") !important;
+}
+
 @-webkit-keyframes aside {
   from {
     left: -5%;
@@ -1217,6 +1246,24 @@ footer .container .footer-links li a:hover {
   }
   to {
     left: 0;
+  }
+}
+
+@-webkit-keyframes scrolltop {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 20px;
+  }
+}
+
+@keyframes scrolltop {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 20px;
   }
 }
 

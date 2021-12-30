@@ -624,6 +624,10 @@ section
     font-style: italic
     margin-bottom: 25px
 
+  p.logged-in-as
+    a
+      color: var(--white)
+
   #email-notes
     display: inline-block
     margin: 0 5px 0 0
@@ -746,6 +750,8 @@ section
 
     a
       color: var(--color-one)
+      position: relative
+      z-index: 1
 
   .reply
     margin: 0px 0 0 0
@@ -844,6 +850,20 @@ footer
         a:hover
           opacity: 0.7
 
+#scroll-top
+  position: fixed
+  z-index: 5
+  display: none
+  bottom: 20px
+  right: 20px
+  color: var(--white)
+  background: var(--color-one)
+  padding: 15px 20px
+  box-shadow: inset 50px 50px 0 rgba(0, 0, 0, 0.4)
+  animation-name: scrolltop
+  animation-duration: 0.5s
+  border-radius: 2px
+
 // 404 page
 #twisted-error404
 
@@ -872,6 +892,7 @@ footer
 
   .container
     background: rgba(255, 255, 255, 0.2)
+    background-size: cover
     backdrop-filter: blur(2px) grayscale(100%)
     position: absolute
     width: 100%
@@ -947,6 +968,9 @@ footer
         a
           color: var(--white)
 
+.twisted-config-page
+  background: url("../images/twisted-config-page.jpg") !important
+
 // Effects
 @keyframes aside
   from
@@ -954,6 +978,13 @@ footer
 
   to
     left: 0
+
+@keyframes scrolltop
+  from
+    bottom: 0
+
+  to
+    bottom: 20px
 
 // Tablet
 @media only screen and (max-width: 800px)

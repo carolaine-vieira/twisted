@@ -56,6 +56,8 @@
       </div>
     </footer>
 
+    <a id="scroll-top" title="Scroll back to top"><i class="fas fa-chevron-up"></i></a>
+
     <?php wp_footer(); ?>
   </body>
 </html>

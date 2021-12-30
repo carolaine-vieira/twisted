@@ -13,8 +13,15 @@
       </div>
 
       <div class="left-container">
-        <h1>Best click of your life</h1>
+        <h1><?php 
+              if (the_field('intro_blog_title')) {
+                the_field('intro_blog_title');
+              } else {
+                bloginfo( 'name' );
+              }
+            ?></h1>
         <div class="description">
+          <?php the_field('intro_blog_title'); ?>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi sint
           impedit nesciunt assumenda repellendus commodi aliquam quidem!
           Perferendis tempore asperiores, magni placeat explicabo excepturi
