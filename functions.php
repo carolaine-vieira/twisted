@@ -1,12 +1,12 @@
 <?php
 
-function wpdocs_theme_name_scripts() {
+function twisted_theme_scripts() {
   wp_enqueue_style('global template', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all');	
   wp_enqueue_script('global scripts', get_template_directory_uri().'/assets/js/script.js', array(), '1.0', 'all');
   wp_enqueue_script('isotope masonry', 'https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.js', array(), '3.0.6', 'all');
   wp_enqueue_script('awesome icons', "https://kit.fontawesome.com/eb5e14c15e.js", array(), '5.15', 'all');
 }
-add_action('wp_enqueue_scripts', 'wpdocs_theme_name_scripts');
+add_action('wp_enqueue_scripts', 'twisted_theme_scripts');
 
 if( !function_exists('twisted_setup') ) {
   function twisted_setup() {
@@ -71,14 +71,14 @@ if( !function_exists('twisted_setup') ) {
 function testimonial_custom_post_type() {
   register_post_type('testimonial',
     array(
-      'labels'      => array(
-          'name'          => __('Testimonials', 'textdomain'),
-          'singular_name' => __('Testimonial', 'textdomain'),              
+      'labels' => array(
+        'name'          => __('Testimonials', 'textdomain'),
+        'singular_name' => __('Testimonial', 'textdomain'),              
       ),
       'public'      => true,
       'has_archive' => false,
       'rewrite'     => array( 'slug' => 'testimonial' ),
-      'menu_icon' => 'dashicons-slides',
+      'menu_icon'   => 'dashicons-slides',
     )
   );
 }
