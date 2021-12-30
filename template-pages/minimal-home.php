@@ -23,14 +23,7 @@
       </div>
 
       <div class="social-links">
-        <ul>
-          <li>
-            <a href=""><i class="fab fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-instagram"></i></a>
-          </li>
-        </ul>
+        <?php get_template_part('template-parts/other/social-icons-box'); ?>
       </div>
     </section>
 

@@ -79,6 +79,22 @@ function testimonial_custom_post_type() {
 }
 add_action('init', 'testimonial_custom_post_type');
 
+// Settings custom post type
+function twisted_custom_post_type() {
+  register_post_type('twisted',
+    array(
+      'labels' => array(
+        'name'          => __('Twisted Settings', 'textdomain'),
+        'singular_name' => __('Twisted Settings', 'textdomain'),              
+      ),
+      'public'      => true,
+      'has_archive' => false,
+      'menu_icon'   => 'dashicons-admin-settings',
+    )
+  );
+}
+add_action('init', 'twisted_custom_post_type');
+
 // TGM Plugin Activation Class
 require_once locate_template('/lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php');
 

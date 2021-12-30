@@ -3,26 +3,20 @@
     <section id="first-section" style="background-image: url(<?php header_image(); ?>)">
       <div class="social-media">
         <ul>
-          <li>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-instagram"></i></a>
-          </li>
+          <?php get_template_part('template-parts/other/social-icons-box'); ?>
         </ul>
       </div>
 
       <div class="left-container">
-        <h1><?php
-                bloginfo( 'name' );
-            ?></h1>
-        <div class="description">
-          <?php the_field('intro_blog_title'); ?>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi sint
-          impedit nesciunt assumenda repellendus commodi aliquam quidem!
-          Perferendis tempore asperiores, magni placeat explicabo excepturi
-          aperiam unde nobis minima temporibus commodi.
-        </div>
+        <?php
+          $query = new WP_Query(array( 'post_type' => 'twisted' ));
+          $query -> the_post();
+        ?>
+        <h1><?php the_field('blog_first_section_title'); ?></h1>
+        <div class="description"><?php the_field('blog_first_section_description'); ?></div>
+        <?php
+          wp_reset_postdata();
+        ?>
       </div>
 
       <div class="right-container">

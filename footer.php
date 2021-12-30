@@ -1,5 +1,20 @@
     
-    <section id="contact" class="pgScroll">
+    <section id="contact" class="pgScroll"
+      <?php
+        $query = new WP_Query(array( 'post_type' => 'twisted' ));
+        $query -> the_post();
+
+        if(get_field('contact_section_background_image')) { 
+      ?>
+        style="background-image: url('<?php the_field('contact_section_background_image') ?>')"
+      <?php
+        } else {
+      ?>
+        style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/contact-section-bg.jpg')"
+      <?php }
+        wp_reset_postdata();
+      ?>
+    >
       <div class="left-container">
         <b>Liked our work?</b>
         <i>Send an email to contact us!</i>
@@ -38,12 +53,7 @@
       <div class="social-media">
         <span>Follow us to see more</span>
         <ul>
-          <li>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-instagram"></i></a>
-          </li>
+          <?php get_template_part('template-parts/other/social-icons-box'); ?>
         </ul>
       </div>
 
