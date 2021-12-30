@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 :root {
   --default-font: "Open Sans", sans-serif;
   --title-font: "IBM Plex Mono", monospace;
@@ -41,7 +42,7 @@ body li {
 }
 
 .pseudo-el, header h2 span:before,
-header h2 span:after, #first-section:after {
+header h2 span:after, #first-section:after, #twisted-single-post #posts .post-container .post-single h3 span:before, #twisted-page #posts .post-container .post-single h3 span:before {
   content: "";
   position: absolute;
 }
@@ -1077,7 +1078,7 @@ footer .container .footer-links li a:hover {
   right: 20px;
   color: var(--white);
   background: var(--color-one);
-  padding: 15px 20px;
+  padding: 10px 15px;
   -webkit-box-shadow: inset 50px 50px 0 rgba(0, 0, 0, 0.4);
           box-shadow: inset 50px 50px 0 rgba(0, 0, 0, 0.4);
   -webkit-animation-name: scrolltop;
@@ -1085,6 +1086,652 @@ footer .container .footer-links li a:hover {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   border-radius: 2px;
+}
+
+#twisted-single-post .pseudo-el, #twisted-single-post header h2 span:before, header h2 #twisted-single-post span:before,
+#twisted-single-post header h2 span:after, header h2 #twisted-single-post span:after, #twisted-single-post #first-section:after, #twisted-single-post #posts .post-container .post-single h3 span:before, #twisted-page #posts .post-container .post-single h3 #twisted-single-post span:before {
+  content: "";
+  position: absolute;
+}
+
+#twisted-single-post #posts {
+  min-height: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--color-one);
+  padding: var(--global-padding);
+  margin: 0 0 -10px 0;
+}
+
+#twisted-single-post #posts p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+#twisted-single-post #posts p:first-child {
+  margin: 0 0 10px 0;
+}
+
+#twisted-single-post #posts blockquote {
+  border-left: 3px solid var(--color-one);
+  background: rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  padding: 10px;
+}
+
+#twisted-single-post #posts blockquote p,
+#twisted-single-post #posts blockquote p:first-child {
+  margin: 0;
+}
+
+#twisted-single-post #posts .post a {
+  border-bottom: 1px solid;
+}
+
+#twisted-single-post #posts .post ul {
+  margin: 8px 0 8px 40px;
+}
+
+#twisted-single-post #posts .post ul li {
+  list-style: unset;
+}
+
+#twisted-single-post #posts h2 {
+  font-family: var(--title-font);
+  margin: 20px 0 10px 0;
+}
+
+#twisted-single-post #posts .is-style-large {
+  text-align: center;
+  border-left: none;
+  background: transparent;
+  margin: 5px 0 10px 0;
+}
+
+#twisted-single-post #posts .is-style-large p {
+  text-align: center;
+  font-family: var(--alt-font);
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+#twisted-single-post #posts .wp-block-pullquote {
+  border-top: 3px solid var(--color-one);
+  border-bottom: 3px solid var(--color-one);
+  margin: 0;
+  padding: 1em 0;
+}
+
+#twisted-single-post #posts .wp-block-pullquote blockquote {
+  background: transparent;
+  border-left: none;
+}
+
+#twisted-single-post #posts .wp-block-pullquote blockquote p {
+  font-weight: 600;
+  text-align: center;
+}
+
+#twisted-single-post #posts table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#twisted-single-post #posts .wp-block-table figcaption {
+  font-size: 13px;
+  border: none;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+#twisted-single-post #posts .is-style-regular td, #twisted-single-post #posts .is-style-regular th {
+  border: 1px solid var(--color-one);
+  text-align: left;
+  padding: 8px;
+}
+
+#twisted-single-post #posts .is-style-stripes td, #twisted-single-post #posts .is-style-stripes th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#twisted-single-post #posts .is-style-stripes tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+#twisted-single-post #posts .wp-block-cover p {
+  text-align: center;
+}
+
+#twisted-single-post #posts .blocks-gallery-grid,
+#twisted-single-post #posts .wp-block-gallery {
+  margin: 0;
+}
+
+#twisted-single-post #posts figcaption {
+  text-align: center;
+}
+
+#twisted-single-post #posts .wp-block-media-text__content p.has-large-font-size {
+  line-height: 1.4em;
+  text-align: left;
+  font-size: 25px;
+  font-family: var(--alt-font);
+}
+
+#twisted-single-post #posts .post-container {
+  width: calc(69% + 25px);
+}
+
+#twisted-single-post #posts .post-container .post-single {
+  background: var(--white);
+  margin: 0 var(--global-padding) 0 0;
+  padding: 40px;
+  line-height: 1.6em;
+}
+
+#twisted-single-post #posts .post-container .post-single h3 {
+  font-family: var(--title-font);
+  font-size: 30px;
+}
+
+#twisted-single-post #posts .post-container .post-single h3 span {
+  display: inline-block;
+}
+
+#twisted-single-post #posts #post-options {
+  width: calc(31% - 25px);
+  padding: 40px 0 0 40px;
+}
+
+#twisted-single-post #posts #post-options .permalink-navigation {
+  margin: 40px 0 0 0;
+  font-family: var(--title-font);
+  line-height: 2.5em;
+}
+
+#twisted-single-post #posts #post-options .permalink-navigation a {
+  color: var(--white);
+  border: none;
+}
+
+#twisted-single-post #posts #post-options .category {
+  position: absolute;
+  margin: -90px 0 0 0;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories {
+  margin: 0;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li {
+  list-style: none;
+  position: relative;
+  display: none;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li a {
+  color: var(--white);
+  border: none;
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li:before {
+  content: "//";
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--white);
+}
+
+#twisted-single-post #posts #post-options .category .post-categories li:first-child {
+  display: block;
+}
+
+#twisted-single-post #posts #post-options .item {
+  margin-bottom: 24px;
+}
+
+#twisted-single-post #posts #post-options .item .item-title {
+  cursor: pointer;
+  font-family: var(--title-font);
+  color: var(--white);
+}
+
+#twisted-single-post #posts #post-options .item .item-content {
+  display: none;
+}
+
+#twisted-single-post #posts #post-options .item .comments,
+#twisted-single-post #posts #post-options .item .author {
+  margin: 15px 0 30px 0;
+}
+
+#twisted-single-post #posts #post-options .item .comments a,
+#twisted-single-post #posts #post-options .item .author a {
+  color: var(--white);
+  display: block;
+  text-decoration: underline;
+}
+
+#twisted-single-post #posts #post-options .item .author {
+  text-transform: capitalize;
+}
+
+#twisted-single-post #posts #post-options .item .comments .title {
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 10px;
+  display: block;
+  opacity: 0.8;
+}
+
+#twisted-single-post #posts #post-options .item .post-info {
+  color: var(--white);
+  padding-left: 15px;
+  margin: 15px 0 40px 0;
+  border-left: 2px solid;
+}
+
+#twisted-single-post #posts #post-options .item .post-info span.title {
+  font-weight: 600;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-date {
+  color: var(--white);
+  margin: 15px 0 10px 0;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-tags {
+  margin: 15px 0 15px 0;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-tags a {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: var(--white);
+  opacity: 0.8;
+  border-bottom-color: transparent;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-tags a:hover {
+  opacity: 1;
+  border-bottom: 1px solid;
+}
+
+#twisted-single-post #posts #post-options .item .post-info .post-shortlink span.short {
+  font-size: 14px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#twisted-single-post #posts .type-page {
+  width: 100%;
+}
+
+#twisted-single-post #posts .type-page .post-single {
+  margin: 0;
+}
+
+#twisted-single-post #posts .type-page .post-single h3 {
+  text-align: center;
+}
+
+#twisted-single-post #first-section {
+  min-height: unset;
+}
+
+#twisted-single-post #first-section .social-media {
+  left: initial !important;
+  right: var(--global-padding);
+  bottom: 120px !important;
+}
+
+#twisted-single-post #first-section .social-media ul li {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+#twisted-single-post #first-section .left-container {
+  margin-top: 0 !important;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 160px var(--global-padding) 120px var(--global-padding);
+  width: 65%;
+}
+
+#twisted-single-post #first-section .description {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 800px) {
+  #twisted-single-post #posts .post-container .post-single {
+    padding: var(--global-padding);
+  }
+  #twisted-single-post #posts #post-options {
+    padding: 20px 0 0 20px;
+    font-size: 13px;
+  }
+  #twisted-single-post #posts #post-options .category {
+    margin: -60px 0 0 0;
+  }
+  #twisted-single-post .comments-box #respond {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #twisted-single-post #posts {
+    display: block;
+  }
+  #twisted-single-post #posts .post-container {
+    width: calc(100% - var(--global-padding)) !important;
+  }
+  #twisted-single-post #posts .post-container .post-single {
+    padding: var(--global-padding);
+  }
+  #twisted-single-post #posts #post-options {
+    padding: 0 calc( var(--global-padding) * 2) var(--global-padding) calc( var(--global-padding) * 2);
+    font-size: 16px;
+    width: 100%;
+    margin: -30px 0 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  #twisted-single-post #posts #post-options .category {
+    display: none;
+  }
+  #twisted-single-post .comments-box #respond {
+    padding: 0;
+  }
+}
+
+#twisted-page .pseudo-el, #twisted-page header h2 span:before, header h2 #twisted-page span:before,
+#twisted-page header h2 span:after, header h2 #twisted-page span:after, #twisted-page #first-section:after, #twisted-single-post #posts .post-container .post-single h3 #twisted-page span:before, #twisted-page #posts .post-container .post-single h3 span:before {
+  content: "";
+  position: absolute;
+}
+
+#twisted-page #posts {
+  min-height: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--color-one);
+  padding: var(--global-padding);
+  margin: 0 0 -10px 0;
+}
+
+#twisted-page #posts .post-container {
+  width: calc(69% + 25px);
+}
+
+#twisted-page #posts .post-container .post-single {
+  background: var(--white);
+  padding: 40px;
+  line-height: 1.6em;
+  margin: 0 0 -100px 0;
+}
+
+#twisted-page #posts .post-container .post-single h3 {
+  font-family: var(--title-font);
+  font-size: 30px;
+  text-align: center;
+  min-height: unset;
+}
+
+#twisted-page #posts .post-container .post-single h3 span {
+  display: inline-block;
+}
+
+#twisted-page #posts #post-options {
+  width: calc(31% - 25px);
+  padding: 40px 0 0 40px;
+}
+
+#twisted-page #posts #post-options .permalink-navigation {
+  margin: 40px 0 0 0;
+  font-family: var(--title-font);
+  line-height: 2.5em;
+}
+
+#twisted-page #posts #post-options .permalink-navigation a {
+  color: var(--white);
+  border: none;
+}
+
+#twisted-page #posts #post-options .category {
+  position: absolute;
+  margin: -90px 0 0 0;
+}
+
+#twisted-page #posts #post-options .category .post-categories {
+  margin: 0;
+}
+
+#twisted-page #posts #post-options .category .post-categories li {
+  list-style: none;
+  position: relative;
+  display: none;
+}
+
+#twisted-page #posts #post-options .category .post-categories li a {
+  color: var(--white);
+  border: none;
+}
+
+#twisted-page #posts #post-options .category .post-categories li:before {
+  content: "//";
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--white);
+}
+
+#twisted-page #posts #post-options .category .post-categories li:first-child {
+  display: block;
+}
+
+#twisted-page #posts #post-options .item {
+  margin-bottom: 24px;
+}
+
+#twisted-page #posts #post-options .item .item-title {
+  cursor: pointer;
+  font-family: var(--title-font);
+  color: var(--white);
+}
+
+#twisted-page #posts #post-options .item .item-content {
+  display: none;
+}
+
+#twisted-page #posts #post-options .item .post-info {
+  color: var(--white);
+  padding-left: 15px;
+  margin: 15px 0 40px 0;
+  border-left: 2px solid;
+}
+
+#twisted-page #posts #post-options .item .post-info span.title {
+  font-weight: 600;
+}
+
+#twisted-page #posts #post-options .item .post-info .post-date {
+  color: var(--white);
+  margin: 15px 0 10px 0;
+}
+
+#twisted-page #posts #post-options .item .post-info .post-tags {
+  margin: 15px 0 15px 0;
+}
+
+#twisted-page #posts #post-options .item .post-info .post-tags a {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: var(--white);
+  opacity: 0.8;
+  border-bottom-color: transparent;
+}
+
+#twisted-page #posts #post-options .item .post-info .post-tags a:hover {
+  opacity: 1;
+  border-bottom: 1px solid;
+}
+
+#twisted-page #posts #post-options .item .post-info .post-shortlink span.short {
+  font-size: 14px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#twisted-page #posts p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+#twisted-page #posts p:first-child {
+  margin: 0 0 10px 0;
+}
+
+#twisted-page #posts blockquote {
+  border-left: 3px solid var(--color-one);
+  background: rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  padding: 10px;
+}
+
+#twisted-page #posts blockquote p,
+#twisted-page #posts blockquote p:first-child {
+  margin: 0;
+}
+
+#twisted-page #posts .post a {
+  border-bottom: 1px solid;
+}
+
+#twisted-page #posts ul {
+  margin: 8px 0 8px 40px;
+}
+
+#twisted-page #posts ul li {
+  list-style: unset;
+}
+
+#twisted-page #posts h2 {
+  font-family: var(--title-font);
+  margin: 20px 0 10px 0;
+}
+
+#twisted-page #posts .is-style-large {
+  text-align: center;
+  border-left: none;
+  background: transparent;
+  margin: 5px 0 10px 0;
+}
+
+#twisted-page #posts .is-style-large p {
+  text-align: center;
+  font-family: var(--alt-font);
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+#twisted-page #posts .wp-block-pullquote {
+  border-top: 3px solid var(--color-one);
+  border-bottom: 3px solid var(--color-one);
+  margin: 0;
+  padding: 1em 0;
+}
+
+#twisted-page #posts .wp-block-pullquote blockquote {
+  background: transparent;
+  border-left: none;
+}
+
+#twisted-page #posts .wp-block-pullquote blockquote p {
+  font-weight: 600;
+  text-align: center;
+}
+
+#twisted-page #posts table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#twisted-page #posts .wp-block-table figcaption {
+  font-size: 13px;
+  border: none;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+#twisted-page #posts .is-style-regular td, #twisted-page #posts .is-style-regular th {
+  border: 1px solid var(--color-one);
+  text-align: left;
+  padding: 8px;
+}
+
+#twisted-page #posts .is-style-stripes td, #twisted-page #posts .is-style-stripes th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#twisted-page #posts .is-style-stripes tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+#twisted-page #posts .wp-block-cover p {
+  text-align: center;
+}
+
+#twisted-page #posts .blocks-gallery-grid,
+#twisted-page #posts .wp-block-gallery {
+  margin: 0;
+}
+
+#twisted-page #posts figcaption {
+  text-align: center;
+}
+
+#twisted-page #posts .wp-block-media-text__content p.has-large-font-size {
+  line-height: 1.4em;
+  text-align: left;
+  font-size: 25px;
+  font-family: var(--alt-font);
+}
+
+#twisted-page #posts .type-page {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  top: -120px;
+}
+
+#twisted-page #first-section {
+  min-height: unset !important;
+}
+
+#twisted-page #first-section .social-media {
+  left: initial !important;
+  right: var(--global-padding);
+  bottom: 120px !important;
+}
+
+#twisted-page #first-section .social-media ul li {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+#twisted-page #first-section .left-container {
+  margin-top: 0 !important;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 160px var(--global-padding) 120px var(--global-padding);
+  width: 65%;
+}
+
+#twisted-page #first-section .description {
+  opacity: 0.8;
 }
 
 #twisted-error404 #error404-message {

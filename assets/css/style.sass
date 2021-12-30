@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap')
+
 \:root
   --default-font: "Open Sans", sans-serif
   --title-font: "IBM Plex Mono", monospace
@@ -858,11 +860,579 @@ footer
   right: 20px
   color: var(--white)
   background: var(--color-one)
-  padding: 15px 20px
+  padding: 10px 15px
   box-shadow: inset 50px 50px 0 rgba(0, 0, 0, 0.4)
   animation-name: scrolltop
   animation-duration: 0.5s
   border-radius: 2px
+
+// Single Post
+#twisted-single-post
+  .pseudo-el
+    content: ""
+    position: absolute
+
+  #posts
+    min-height: unset
+    display: flex
+    background: var(--color-one)
+    padding: var(--global-padding)
+    margin: 0 0 -10px 0
+
+    p
+      margin: 10px 0
+      text-align: justify
+
+    p:first-child
+      margin: 0 0 10px 0
+
+    blockquote
+      border-left: 3px solid var(--color-one)
+      background: rgba(0, 0, 0, 0.1)
+      margin: 5px 0
+      padding: 10px
+
+      p,
+      p:first-child
+        margin: 0
+
+    .post
+      a
+        border-bottom: 1px solid
+
+      ul
+        margin: 8px 0 8px 40px
+
+        li
+          list-style: unset
+
+    h2
+      font-family: var(--title-font)
+      margin: 20px 0 10px 0
+
+    .is-style-large
+      text-align: center
+      border-left: none
+      background: transparent
+      margin: 5px 0 10px 0
+
+      p
+        text-align: center
+        font-family: var(--alt-font)
+        margin-bottom: 5px
+        font-size: 25px
+
+    .wp-block-pullquote
+      border-top: 3px solid var(--color-one)
+      border-bottom: 3px solid var(--color-one)
+      margin: 0
+      padding: 1em 0
+
+      blockquote
+        background: transparent
+        border-left: none
+
+        p
+          font-weight: 600
+          text-align: center
+
+    table
+      border-collapse: collapse
+      width: 100%
+
+    .wp-block-table
+      figcaption
+        font-size: 13px
+        border: none
+        font-style: italic
+        margin-bottom: 0
+
+    .is-style-regular
+      td, th
+        border: 1px solid var(--color-one)
+        text-align: left
+        padding: 8px
+
+    .is-style-stripes
+      td, th
+        border: 1px solid #dddddd
+        text-align: left
+        padding: 8px
+
+      tr:nth-child(odd)
+        background-color: #eee
+
+    .wp-block-cover
+      p
+        text-align: center
+
+    .blocks-gallery-grid,
+    .wp-block-gallery
+      margin: 0
+
+    figcaption
+      text-align: center
+
+    .wp-block-media-text__content
+      p.has-large-font-size
+        line-height: 1.4em
+        text-align: left
+        font-size: 25px
+        font-family: var(--alt-font)
+
+    .post-container
+      width: calc(69% + 25px)
+
+      .post-single
+        background: var(--white)
+        margin: 0 var(--global-padding) 0 0
+        padding: 40px
+        line-height: 1.6em
+
+        h3
+          font-family: var(--title-font)
+          font-size: 30px
+
+          span
+            display: inline-block
+            position:
+
+          span:before
+            @extend .pseudo-el
+
+    #post-options
+      width: calc(31% - 25px)
+      padding: 40px 0 0 40px
+
+      .permalink-navigation
+        margin: 40px 0 0 0
+        font-family: var(--title-font)
+        line-height: 2.5em
+
+        a
+          color: var(--white)
+          border: none
+
+      .category
+        position: absolute
+        margin: -90px 0 0 0
+
+        .post-categories
+          margin: 0
+
+          li
+            list-style: none
+            position: relative
+            display: none
+
+            a
+              color: var(--white)
+              border: none
+
+          li:before
+            content: "//"
+            display: inline-block
+            margin-right: 5px
+            color: var(--white)
+
+          li:first-child
+            display: block
+
+      .item
+        margin-bottom: 24px
+
+        .item-title
+          cursor: pointer
+          font-family: var(--title-font)
+          color: var(--white)
+
+        .item-content
+          display: none
+
+        .comments,
+        .author
+          margin: 15px 0 30px 0
+
+          a
+            color: var(--white)
+            display: block
+            text-decoration: underline
+
+        .author
+          text-transform: capitalize
+
+        .comments
+          .title
+            font-style: italic
+            color: var(--white)
+            margin-bottom: 10px
+            display: block
+            opacity: 0.8
+
+        .post-info
+          //font-family: var(--title-font)
+          color: var(--white)
+          //font-size: 15px
+          padding-left: 15px
+          margin: 15px 0 40px 0
+          border-left: 2px solid
+
+          span.title
+            font-weight: 600
+
+          .post-date
+            color: var(--white)
+            margin: 15px 0 10px 0
+
+          .post-tags
+            margin: 15px 0 15px 0
+
+            a
+              display: inline-block
+              margin-bottom: 4px
+              color: var(--white)
+              opacity: 0.8
+              border-bottom-color: transparent
+
+            a:hover
+              opacity: 1
+              border-bottom: 1px solid
+
+          .post-shortlink
+            span.short
+              font-size: 14px
+              padding: 1px 5px
+              border-radius: 3px
+              background: rgba(255, 255, 255, 0.2)
+
+    .type-page
+      width: 100%
+
+      .post-single
+        margin: 0
+
+        h3
+          text-align: center
+
+  #first-section
+    min-height: unset
+
+    .social-media
+      left: initial !important
+      right: var(--global-padding)
+      bottom: 120px !important
+
+      ul
+        li
+          margin-right: 0
+          margin-left: 10px
+
+    .left-container
+      margin-top: 0 !important
+      background: rgba(0, 0, 0, 0.4)
+      // backdrop-filter: blur(1px)
+      padding: 160px var(--global-padding) 120px var(--global-padding)
+      width: 65%
+
+    .description
+      opacity: 0.8
+
+  // Tablet
+@media only screen and (max-width: 800px)
+  #twisted-single-post
+    #posts
+      .post-container
+        .post-single
+          padding: var(--global-padding)
+
+      #post-options
+        padding: 20px 0 0 20px
+        font-size: 13px
+
+        .category
+          margin: -60px 0 0 0
+
+    .comments-box
+      #respond
+        padding: 0
+
+// Phone
+@media only screen and (max-width: 500px)
+  #twisted-single-post
+    #posts
+      display: block
+
+      .post-container
+        width: calc(100% - var(--global-padding)) !important
+
+        .post-single
+          padding: var(--global-padding)
+
+      #post-options
+        padding: 0 calc( var(--global-padding) * 2) var(--global-padding) calc( var(--global-padding) * 2)
+        font-size: 16px
+        width: 100%
+        margin: -30px 0 40px 0
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+        .category
+          display: none
+
+    .comments-box
+      #respond
+        padding: 0
+
+// Page
+#twisted-page
+  .pseudo-el
+    content: ""
+    position: absolute
+
+  #posts
+    min-height: unset
+    display: flex
+    background: var(--color-one)
+    padding: var(--global-padding)
+    margin: 0 0 -10px 0
+
+    .post-container
+      width: calc(69% + 25px)
+
+      .post-single
+        background: var(--white)
+        padding: 40px
+        line-height: 1.6em
+        margin: 0 0 -100px 0
+
+        h3
+          font-family: var(--title-font)
+          font-size: 30px
+          text-align: center
+          min-height: unset
+
+          span
+            display: inline-block
+            position:
+
+          span:before
+            @extend .pseudo-el
+
+    #post-options
+      width: calc(31% - 25px)
+      padding: 40px 0 0 40px
+
+      .permalink-navigation
+        margin: 40px 0 0 0
+        font-family: var(--title-font)
+        line-height: 2.5em
+
+        a
+          color: var(--white)
+          border: none
+
+      .category
+        position: absolute
+        margin: -90px 0 0 0
+
+        .post-categories
+          margin: 0
+
+          li
+            list-style: none
+            position: relative
+            display: none
+
+            a
+              color: var(--white)
+              border: none
+
+          li:before
+            content: "//"
+            display: inline-block
+            margin-right: 5px
+            color: var(--white)
+
+          li:first-child
+            display: block
+
+      .item
+        margin-bottom: 24px
+
+        .item-title
+          cursor: pointer
+          font-family: var(--title-font)
+          color: var(--white)
+
+        .item-content
+          display: none
+
+          .comments-box
+
+        .post-info
+          //font-family: var(--title-font)
+          color: var(--white)
+          //font-size: 15px
+          padding-left: 15px
+          margin: 15px 0 40px 0
+          border-left: 2px solid
+
+          span.title
+            font-weight: 600
+
+          .post-date
+            color: var(--white)
+            margin: 15px 0 10px 0
+
+          .post-tags
+            margin: 15px 0 15px 0
+
+            a
+              display: inline-block
+              margin-bottom: 4px
+              color: var(--white)
+              opacity: 0.8
+              border-bottom-color: transparent
+
+            a:hover
+              opacity: 1
+              border-bottom: 1px solid
+
+          .post-shortlink
+            span.short
+              font-size: 14px
+              padding: 1px 5px
+              border-radius: 3px
+              background: rgba(255, 255, 255, 0.2)
+
+    p
+      margin: 10px 0
+      text-align: justify
+
+    p:first-child
+      margin: 0 0 10px 0
+
+    blockquote
+      border-left: 3px solid var(--color-one)
+      background: rgba(0, 0, 0, 0.1)
+      margin: 5px 0
+      padding: 10px
+
+      p,
+      p:first-child
+        margin: 0
+
+    .post
+      a
+        border-bottom: 1px solid
+
+    ul
+      margin: 8px 0 8px 40px
+
+      li
+        list-style: unset
+
+    h2
+      font-family: var(--title-font)
+      margin: 20px 0 10px 0
+
+    .is-style-large
+      text-align: center
+      border-left: none
+      background: transparent
+      margin: 5px 0 10px 0
+
+      p
+        text-align: center
+        font-family: var(--alt-font)
+        margin-bottom: 5px
+        font-size: 25px
+
+    .wp-block-pullquote
+      border-top: 3px solid var(--color-one)
+      border-bottom: 3px solid var(--color-one)
+      margin: 0
+      padding: 1em 0
+
+      blockquote
+        background: transparent
+        border-left: none
+
+        p
+          font-weight: 600
+          text-align: center
+
+    table
+      border-collapse: collapse
+      width: 100%
+
+    .wp-block-table
+      figcaption
+        font-size: 13px
+        border: none
+        font-style: italic
+        margin-bottom: 0
+
+    .is-style-regular
+      td, th
+        border: 1px solid var(--color-one)
+        text-align: left
+        padding: 8px
+
+    .is-style-stripes
+      td, th
+        border: 1px solid #dddddd
+        text-align: left
+        padding: 8px
+
+      tr:nth-child(odd)
+        background-color: #eee
+
+    .wp-block-cover
+      p
+        text-align: center
+
+    .blocks-gallery-grid,
+    .wp-block-gallery
+      margin: 0
+
+    figcaption
+      text-align: center
+
+    .wp-block-media-text__content
+      p.has-large-font-size
+        line-height: 1.4em
+        text-align: left
+        font-size: 25px
+        font-family: var(--alt-font)
+
+    .type-page
+      width: 100%
+      position: relative
+      z-index: 1
+      top: -120px
+
+  #first-section
+    min-height: unset !important
+
+    .social-media
+      left: initial !important
+      right: var(--global-padding)
+      bottom: 120px !important
+
+      ul
+        li
+          margin-right: 0
+          margin-left: 10px
+
+    .left-container
+      margin-top: 0 !important
+      background: rgba(0, 0, 0, 0.4)
+      // backdrop-filter: blur(1px)
+      padding: 160px var(--global-padding) 120px var(--global-padding)
+      width: 65%
+
+    .description
+      opacity: 0.8
 
 // 404 page
 #twisted-error404
@@ -968,6 +1538,7 @@ footer
         a
           color: var(--white)
 
+// Template Twisted Configuration Page
 .twisted-config-page
   background: url("../images/twisted-config-page.jpg") !important
 
