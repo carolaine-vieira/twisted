@@ -1,5 +1,6 @@
 <?php
 
+// Enqueue scripts and styles
 function twisted_theme_scripts() {
   wp_enqueue_style('global template', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all');	
   wp_enqueue_script('global scripts', get_template_directory_uri().'/assets/js/script.js', array(), '1.0', 'all');
@@ -8,15 +9,16 @@ function twisted_theme_scripts() {
 }
 add_action('wp_enqueue_scripts', 'twisted_theme_scripts');
 
+// Twisted theme setup
 if( !function_exists('twisted_setup') ) {
   function twisted_setup() {
-    // adding theme support
+    // Adding theme support
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('post-formats', array('image'));
     add_theme_support( 'editor-styles' );
 
-    // custom header menu
+    // Custom header menu
     $args = array(
       'flex-width'    => true,
       'width'         => 1500,
@@ -26,7 +28,7 @@ if( !function_exists('twisted_setup') ) {
     );
     add_theme_support('custom-header', $args);
 
-    // custom menus
+    // Custom menus
     function register_my_menus() {
       register_nav_menus(
         array(
@@ -36,13 +38,6 @@ if( !function_exists('twisted_setup') ) {
       );
     }
     add_action('init', 'register_my_menus');
-
-    // remove width & height attributes from images
-    function remove_img_attr ($html) {
-      return preg_replace('/(width|height)="\d+"\s/', "", $html);
-    }
-    
-    add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 
     // Custom background color.
     add_theme_support(
@@ -67,7 +62,7 @@ if( !function_exists('twisted_setup') ) {
   add_action( 'after_setup_theme', 'twisted_setup' );
 }
 
-// Testimonial Custom Post Type
+// Testimonial custom post type
 function testimonial_custom_post_type() {
   register_post_type('testimonial',
     array(
