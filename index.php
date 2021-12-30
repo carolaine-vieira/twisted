@@ -14,8 +14,8 @@
 
       <div class="left-container">
         <h1><?php 
-              if (the_field('intro_blog_title')) {
-                the_field('intro_blog_title');
+              if (the_field('blog_first_section_title')) {
+                
               } else {
                 bloginfo( 'name' );
               }

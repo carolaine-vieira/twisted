@@ -7,10 +7,10 @@
 
       <div class="right-container">
         <form action="enviar.php" method="post" class="contact_form">
-          <label for="inpt_name">Name</label>
+          <label for="inpt_name">Name <span class="required">*</span></label>
           <input type="text" name="inpt_name" id="inpt_name" placeholder="Gisele Mattos" required />
 
-          <label for="inpt_email">Email</label>
+          <label for="inpt_email">Email <span class="required">*</span></label>
           <input
             type="email"
             name="inpt_email"
@@ -19,7 +19,7 @@
             required
           />
 
-          <label for="inpt_message">Message</label>
+          <label for="inpt_message">Message <span class="required">*</span></label>
           <textarea
             name="inpt_message"
             id="message"
