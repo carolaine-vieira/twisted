@@ -10,7 +10,7 @@ function twisted_theme_scripts() {
 add_action('wp_enqueue_scripts', 'twisted_theme_scripts');
 
 // Twisted theme setup
-if( !function_exists('twisted_setup') ) {
+if ( !function_exists('twisted_setup') ) {
   function twisted_setup() {
     // Adding theme support
     add_theme_support('title-tag');
@@ -82,8 +82,8 @@ add_action('init', 'testimonial_custom_post_type');
 // TGM Plugin Activation Class
 require_once locate_template('/lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php');
 
-// Requiring Advanced Custom Fields Plugin
-function my_theme_register_required_plugins() {
+// Require Advanced Custom Fields Plugin
+function twisted_required_plugins() {
 	$plugins = array(
 		// Require ACF
 		array(
@@ -95,7 +95,17 @@ function my_theme_register_required_plugins() {
 			'force_activation' 		=> true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			  => '', // If set, overrides default API URL and points to an external URL
-		)
+    ),
+    array(
+			'name'     				    => 'Classic Editor', // The plugin name
+			'slug'     				    => 'classic-editor', // The plugin slug (typically the folder name)
+			'source'   				    => 'http://downloads.wordpress.org/plugin/classic-editor.zip', // The plugin source
+			'required' 				    => false, // If false, the plugin is only 'recommended' instead of required
+			'version' 				    => '1.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			'external_url' 			  => '', // If set, overrides default API URL and points to an external URL
+    )
 	);
 
 	$theme_text_domain = 'twisted';
@@ -133,6 +143,4 @@ function my_theme_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
-add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
-
-
+add_action( 'tgmpa_register', 'twisted_required_plugins' );
