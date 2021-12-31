@@ -160,3 +160,4 @@ function twisted_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'twisted_required_plugins' );
+

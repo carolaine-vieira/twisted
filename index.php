@@ -47,7 +47,6 @@
             </div>
         <?php
           endwhile;
-
           wp_reset_postdata();
         ?>
       </div>
@@ -55,29 +54,43 @@
 
     <section id="posts">
       <div id="posts-container" class="grid pgScroll">
-        <?php
-          $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 10,
-          );
-          $the_query = new WP_Query($args);
-          
-          if ( $the_query -> have_posts() ) :
-            while ( $the_query -> have_posts() ) :
-              $the_query -> the_post();
+        <?php 
+          if( have_posts() ):
+            while( have_posts() ) : 
               the_post();
               get_template_part('template-parts/content/content', get_post_format());
-            endwhile;
+            endwhile; 
           else:
             _e('Sorry, no posts matched your criteria.', 'textdomain');
-          endif;
-          
-          wp_reset_postdata();
-        ?>
+          endif; 
+        ?> 
       </div>
-
-      <!-- <div class="read-more">Load More Posts</div> -->
     </section>
+
+    <div id="pagination">
+      <?php 
+        $args = array(
+          'base'               => '%_%',
+          //'format'             => '?paged=%#%',
+          'total'              => 1,
+          'current'            => 0,
+          'show_all'           => false,
+          'end_size'           => 1,
+          'mid_size'           => 2,
+          'prev_next'          => true,
+          'prev_text'          => __('« Previous'),
+          'next_text'          => __('Next »'),
+          'type'               => 'plain',
+          'add_args'           => false,
+          'add_fragment'       => '',
+          'before_page_number' => '',
+          'after_page_number'  => ''
+        );
+
+        the_posts_pagination( array($args)
+        ); 
+      ?>
+    </div>
 
     <section id="testimonial">
       <div class="slide-container">

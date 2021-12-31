@@ -1002,10 +1002,6 @@ section {
   margin-left: 10px;
 }
 
-.author-page-posts .post {
-  width: 20% !important;
-}
-
 footer {
   background: #000;
   color: var(--white);
@@ -1884,6 +1880,10 @@ footer .container .footer-links li a:hover {
 
 #twiste-minimal-template .social-links ul li a {
   color: var(--white);
+}
+
+#twisted-archive #posts #posts-container .post {
+  width: calc( 100vw / 5 - 35px);
 }
 
 .twisted-config-page {
