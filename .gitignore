@@ -3,9 +3,4 @@
 *.sass.map
 *.scss.map
 
-trash.php
-trash
-
 .gitignore
-
-trash/

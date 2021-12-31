@@ -85,7 +85,10 @@ function twisted_custom_post_type() {
     array(
       'labels' => array(
         'name'          => __('Twisted Settings', 'textdomain'),
-        'singular_name' => __('Twisted Settings', 'textdomain'),              
+        'singular_name' => __('Twisted Settings', 'textdomain'),
+        'edit_item'     => __('Edit Twisted Settings', 'textdomain'),
+        'new_item'      => __('New Twisted Settings', 'textdomain' ),
+        'search_items'  => __('Search Twisted Settings', 'textdomain' ),
       ),
       'public'      => true,
       'has_archive' => false,

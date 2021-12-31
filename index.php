@@ -10,11 +10,18 @@
       <div class="left-container">
         <?php
           $query = new WP_Query(array( 'post_type' => 'twisted' ));
-          $query -> the_post();
+          if( $query -> have_posts() ) {
+            $query -> the_post();          
         ?>
         <h1><?php the_field('blog_first_section_title'); ?></h1>
         <div class="description"><?php the_field('blog_first_section_description'); ?></div>
         <?php
+          } else {
+        ?>
+        <h1><?php bloginfo( 'name' ); ?></h1>
+        <div class="description"><?php bloginfo( 'description' ); ?></div>
+        <?php
+          }
           wp_reset_postdata();
         ?>
       </div>
@@ -92,24 +99,30 @@
       ?>
     </div>
 
+    <?php
+      $args = array(
+        'post_type' => 'testimonial',
+        'order'   => 'ASC',
+        'posts_per_page' => 6
+      );
+      $query = new WP_Query($args);
+
+      if( $query -> have_posts() ) :        
+    ?>
     <section id="testimonial">
       <div class="slide-container">
         <?php
-          $args = array(
-            'post_type' => 'testimonial',
-            'order'   => 'ASC',
-            'posts_per_page' => 6
-          );
-          $query = new WP_Query($args);
-
           while ($query -> have_posts()) :
             $query -> the_post();
             get_template_part('template-parts/other/testimonial');
           endwhile;
-
-          wp_reset_postdata();
         ?>
       </div>
     </section>
+    <?php      
+      endif;
+
+      wp_reset_postdata();
+    ?>
 
 <?php get_footer(); ?>

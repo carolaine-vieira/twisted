@@ -1,7 +1,8 @@
         <ul>
           <?php
             $query = new WP_Query(array( 'post_type' => 'twisted' ));
-            $query -> the_post();
+            if( $query -> have_posts() ) {
+              $query -> the_post();  
           ?>
 
           <?php if(get_field('twisted_facebook_link')) { ?>
@@ -36,6 +37,7 @@
           <?php } ?>
 
           <?php
+            }
             wp_reset_postdata();
           ?>
         </ul>
