@@ -1,25 +1,16 @@
     
     <section id="contact" class="pgScroll"
-      <?php
-        $query = new WP_Query(array( 'post_type' => 'twisted' ));
-        if( $query -> have_posts() ) {
-          $query -> the_post(); 
-
-        if(get_field('contact_section_background_image')) { 
+      <?php 
+        if( get_field('contact_section_background_image', twisted_config_page()) ) {
       ?>
-          style="background-image: url('<?php the_field('contact_section_background_image') ?>')"
-        <?php
-          } else {
-        ?>
-          style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/contact-section-bg.jpg')"
-        <?php }
+        style="background-image: url('<?php the_field( 'contact_section_background_image', twisted_config_page() ) ?>')"
+      <?php          
         } else {
       ?>
         style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/contact-section-bg.jpg')"
       <?php
         }
-        wp_reset_postdata();
-      ?>
+      ?>      
     >
       <div class="left-container">
         <b>Liked our work?</b>
@@ -27,16 +18,11 @@
       </div>
 
       <div class="right-container">
-        <?php
-          $query = new WP_Query(array( 'post_type' => 'twisted' ));
-          if( $query -> have_posts() ) {
-            $query -> the_post(); 
-            if( get_field('contact_form_7_shortcode') ) {
-              echo do_shortcode(get_field('contact_form_7_shortcode'));  
-            }
-          }
-          wp_reset_postdata();
-        ?>        
+        <?php 
+          if( get_field('contact_form_7_shortcode', twisted_config_page()) ) {
+            echo do_shortcode( get_field( 'contact_form_7_shortcode', twisted_config_page()) ); 
+          } 
+        ?>
       </div>
     </section>
     

@@ -79,25 +79,6 @@ function testimonial_custom_post_type() {
 }
 add_action('init', 'testimonial_custom_post_type');
 
-// Settings custom post type
-function twisted_custom_post_type() {
-  register_post_type('twisted',
-    array(
-      'labels' => array(
-        'name'          => __('Twisted Settings', 'textdomain'),
-        'singular_name' => __('Twisted Settings', 'textdomain'),
-        'edit_item'     => __('Edit Twisted Settings', 'textdomain'),
-        'new_item'      => __('New Twisted Settings', 'textdomain' ),
-        'search_items'  => __('Search Twisted Settings', 'textdomain' ),
-      ),
-      'public'      => true,
-      'has_archive' => false,
-      'menu_icon'   => 'dashicons-admin-settings',
-    )
-  );
-}
-add_action('init', 'twisted_custom_post_type');
-
 // TGM Plugin Activation Class
 require_once locate_template('/lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php');
 
@@ -121,6 +102,16 @@ function twisted_required_plugins() {
 			'source'   				    => 'http://downloads.wordpress.org/plugin/classic-editor.zip', // The plugin source
 			'required' 				    => false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				    => '1.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			'external_url' 			  => '', // If set, overrides default API URL and points to an external URL
+    ),
+    array(
+			'name'     				    => 'Contact Form 7', // The plugin name
+			'slug'     				    => 'contact-form-7', // The plugin slug (typically the folder name)
+			'source'   				    => 'http://downloads.wordpress.org/plugin/contact-form-7.zip', // The plugin source
+			'required' 				    => false, // If false, the plugin is only 'recommended' instead of required
+			'version' 				    => '5.5.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			  => '', // If set, overrides default API URL and points to an external URL
@@ -164,3 +155,20 @@ function twisted_required_plugins() {
 }
 add_action( 'tgmpa_register', 'twisted_required_plugins' );
 
+//Returns Twisted Theme Configuration Page
+function twisted_config_page() {
+  global $twistedConfigID;
+
+  $args = [
+    'post_type' => 'page',
+    'fields' => 'ids',
+    'nopaging' => true,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'twisted-config.php'
+  ];
+  $pages = get_posts( $args );
+
+  empty($pages) ? $twistedConfigID = 0 : $twistedConfigID = $pages[0];  
+
+  return $twistedConfigID;
+}

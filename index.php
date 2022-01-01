@@ -8,22 +8,24 @@
       </div>
 
       <div class="left-container">
-        <?php
-          $query = new WP_Query(array( 'post_type' => 'twisted' ));
-          if( $query -> have_posts() ) {
-            $query -> the_post();          
-        ?>
-        <h1><?php the_field('blog_first_section_title'); ?></h1>
-        <div class="description"><?php the_field('blog_first_section_description'); ?></div>
-        <?php
-          } else {
-        ?>
-        <h1><?php bloginfo( 'name' ); ?></h1>
-        <div class="description"><?php bloginfo( 'description' ); ?></div>
-        <?php
-          }
-          wp_reset_postdata();
-        ?>
+        <h1>
+          <?php 
+            if( get_field('blog_first_section_title', twisted_config_page()) ) {
+              the_field('blog_first_section_title', twisted_config_page());
+            } else {
+              bloginfo( 'name' );
+            }
+          ?>
+        </h1> 
+        <div class="description">
+          <?php
+            if( get_field('blog_first_section_description', twisted_config_page()) ) {
+              the_field('blog_first_section_description', twisted_config_page());
+            } else {
+              bloginfo( 'description' );
+            }
+          ?>
+        </div>
       </div>
 
       <div class="right-container">
