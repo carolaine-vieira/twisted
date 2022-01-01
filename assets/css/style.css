@@ -652,26 +652,31 @@ section {
   padding: calc(var(--global-padding) + 40px) var(--global-padding);
 }
 
+#contact .right-container p {
+  margin: 0;
+}
+
 #contact .right-container label {
   display: block;
   font-family: var(--title-font);
-  opacity: 0.8;
   font-weight: 500;
-  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #contact .right-container input {
   margin-bottom: 16px;
+  opacity: 1;
 }
 
 #contact .right-container textarea {
   resize: vertical;
+  height: 100px;
 }
 
 #contact .right-container input,
 #contact .right-container textarea {
   border: none;
-  padding: 16px;
+  padding: 12px;
   outline: none;
   width: 100%;
   border-radius: 2px;
@@ -682,8 +687,14 @@ section {
   opacity: 1;
 }
 
-#contact .right-container button {
-  margin-top: 30px;
+#contact .right-container .wpcf7-form-control-wrap {
+  margin-top: 5px;
+  display: block;
+}
+
+#contact .right-container input[type="submit"] {
+  margin-top: 20px;
+  margin-bottom: 0;
   color: var(--white);
   font-family: var(--title-font);
   background: rgba(255, 255, 255, 0.3);
@@ -694,7 +705,7 @@ section {
   cursor: pointer;
 }
 
-#contact .right-container button:hover {
+#contact .right-container input[type="submit"]:focus {
   font-weight: 600;
   background: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.1);

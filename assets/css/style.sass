@@ -520,23 +520,27 @@ section
     width: 60%
     padding: calc(var(--global-padding) + 40px) var(--global-padding)
 
+    p
+      margin: 0
+
     label
       display: block
       font-family: var(--title-font)
-      opacity: 0.8
       font-weight: 500
-      margin-bottom: 5px
+      color: rgba(255, 255, 255, 0.8)
 
     input
       margin-bottom: 16px
+      opacity: 1
 
     textarea
       resize: vertical
+      height: 100px
 
     input,
     textarea
       border: none
-      padding: 16px
+      padding: 12px
       outline: none
       width: 100%
       border-radius: 2px
@@ -545,8 +549,13 @@ section
     form:hover span.required
       opacity: 1
 
-    button
-      margin-top: 30px
+    .wpcf7-form-control-wrap
+      margin-top: 5px
+      display: block
+
+    input[type="submit"]
+      margin-top: 20px
+      margin-bottom: 0
       color: var(--white)
       font-family: var(--title-font)
       background: rgba(255, 255, 255, 0.3)
@@ -556,7 +565,7 @@ section
       padding: 16px
       cursor: pointer
 
-    button:hover
+    input[type="submit"]:focus
       font-weight: 600
       background: rgba(255, 255, 255, 0.5)
       -webkit-box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.1)
