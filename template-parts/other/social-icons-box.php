@@ -1,4 +1,4 @@
-        <ul>
+        <ul class="social-icons-box">
           <?php 
             if( get_field('twisted_facebook_link', twisted_config_page()) ) {
           ?>

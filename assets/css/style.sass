@@ -417,11 +417,11 @@ section
 
 #pagination
   padding: 0 var(--global-padding) 50px var(--global-padding)
+  text-align: center
 
   .nav-links
-    display: flex
-    justify-content: center
     margin: 0 auto
+    display: inline-block
 
     a,
     span.current
@@ -523,7 +523,7 @@ section
         width: 50px
         height: 5px
         display: inline-block
-        margin: 0 5px
+        margin: 0 5px 5px 5px
 
       .active-button
         background: var(--white) !important
@@ -862,6 +862,10 @@ footer
         display: inline-block
         font-size: 24px
         margin-left: 16px
+
+      li.current-menu-item,
+      li.current_page_item
+        font-weight: 600
 
   .container
     display: flex
@@ -1682,6 +1686,11 @@ footer
 
         .blog-link
           margin-top: 10px
+
+  .social-icons-box
+    li
+      font-size: 14px
+      margin-right: 5px
 
 // Phone
 @media only screen and (max-width: 500px)

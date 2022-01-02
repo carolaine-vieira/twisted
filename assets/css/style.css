@@ -522,16 +522,12 @@ section {
 
 #pagination {
   padding: 0 var(--global-padding) 50px var(--global-padding);
+  text-align: center;
 }
 
 #pagination .nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 auto;
+  display: inline-block;
 }
 
 #pagination .nav-links a,
@@ -658,7 +654,7 @@ section {
   width: 50px;
   height: 5px;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 5px 5px 5px;
 }
 
 #testimonial .slide-container .navigation .active-button {
@@ -1082,6 +1078,11 @@ footer .social-media ul li {
   display: inline-block;
   font-size: 24px;
   margin-left: 16px;
+}
+
+footer .social-media ul li.current-menu-item,
+footer .social-media ul li.current_page_item {
+  font-weight: 600;
 }
 
 footer .container {
@@ -2064,6 +2065,10 @@ footer .container .footer-links li a:hover {
   }
   #twiste-minimal-template .container .info .blog-link {
     margin-top: 10px;
+  }
+  .social-icons-box li {
+    font-size: 14px;
+    margin-right: 5px;
   }
 }
 
