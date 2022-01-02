@@ -293,11 +293,11 @@ section
   .right-container
     z-index: 1
     position: relative
-    margin-top: 160px
+    padding: 160px var(--global-padding) 120px var(--global-padding)
 
   .left-container
-    width: 50%
-    padding-left: var(--global-padding)
+    background: rgba(0, 0, 0, 0.2)
+    width: 65%
     color: var(--white)
 
     h1,
@@ -307,25 +307,25 @@ section
       @extend .transition-4ms
       animation-name: aside
       animation-duration: 1s
+      width: 80%
 
     h1
       font-family: var(--title-font)
       font-size: 48px
 
     .description
-      margin-top: 16px
+      margin: 16px 0 0 0
       font-size: 15px
 
   .right-container
     width: 35%
-    margin-left: 15%
     padding-right: var(--global-padding)
 
     .review
       display: flex
       border-radius: 2px
       overflow: hidden
-      margin: 0 0 32px -80px
+      margin: 0 0 32px -130px
       font-family: var(--title-font)
       @extend .transition-3ms
       position: relative
@@ -414,6 +414,28 @@ section
 
           a
             color: var(--color-one)
+
+#pagination
+  padding: 0 var(--global-padding) 50px var(--global-padding)
+
+  .nav-links
+    display: flex
+    justify-content: center
+    margin: 0 auto
+
+    a,
+    span.current
+      display: inline-block
+      margin: 0 0 5px 5px
+      background: var(--white)
+      color: var(--color-one)
+      padding: 10px
+      font-family: var(--title-font)
+      min-width: 50px
+      text-align: center
+
+    span.current
+      box-shadow: inset -50px 0 0 rgba(0, 0, 0, 0.1)
 
 .page-container
   padding: 0 !important
@@ -1151,7 +1173,6 @@ footer
     .left-container
       margin-top: 0 !important
       background: rgba(0, 0, 0, 0.4)
-      // backdrop-filter: blur(1px)
       padding: 160px var(--global-padding) 120px var(--global-padding)
       width: 65%
 
@@ -1290,9 +1311,7 @@ footer
           .comments-box
 
         .post-info
-          //font-family: var(--title-font)
           color: var(--white)
-          //font-size: 15px
           padding-left: 15px
           margin: 15px 0 40px 0
           border-left: 2px solid
@@ -1448,7 +1467,6 @@ footer
     .left-container
       margin-top: 0 !important
       background: rgba(0, 0, 0, 0.4)
-      // backdrop-filter: blur(1px)
       padding: 160px var(--global-padding) 120px var(--global-padding)
       width: 65%
 
@@ -1500,6 +1518,8 @@ footer
         font-family: var(--title-font)
         font-size: 90px
         text-align: center
+        animation-name: zoomOut
+        animation-duration: 0.8s
 
       .subtitle
         font-size: 30px
@@ -1507,6 +1527,8 @@ footer
         font-weight: 300
         font-style: italic
         margin-top: 5px
+        animation-name: zoomOut
+        animation-duration: 0.8s
 
       .blog-link
         font-weight: 300
@@ -1562,6 +1584,8 @@ footer
 // Archive
 #twisted-archive
   #posts
+    min-height: unset
+
     #posts-container
       .post
         width: calc( 100vw / 5 - 35px )
@@ -1584,6 +1608,13 @@ footer
 
   to
     bottom: 20px
+
+@keyframes zoomOut
+  from
+    transform: scale(0.8)
+
+  to
+    transform: scale(1)
 
 // Tablet
 @media only screen and (max-width: 800px)

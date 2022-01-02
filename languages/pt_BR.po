@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twisted 1.0\n"
 "POT-Creation-Date: 2022-01-01 20:37-0300\n"
-"PO-Revision-Date: 2022-01-01 21:26-0300\n"
+"PO-Revision-Date: 2022-01-01 23:29-0300\n"
 "Last-Translator: \n"
 "Language-Team: Carolaine Vieira (s.carolaine.v@gmail.com)\n"
 "Language: pt_BR\n"
@@ -45,7 +45,7 @@ msgstr "Gostou do nosso trabalho?"
 
 #: footer.php:17
 msgid "Send an email to contact us!"
-msgstr "Envie um e-mail para entrar em contato conosco!"
+msgstr "Envie um e-mail para entrar em contato!"
 
 #: footer.php:31
 msgid "Follow us to see more"
@@ -187,7 +187,7 @@ msgstr "« Anteriores"
 
 #: index.php:91
 msgid "Next »"
-msgstr "Próximos »"
+msgstr "Próximas »"
 
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:332
 #, php-format

@@ -6,17 +6,10 @@
           <?php get_template_part('template-parts/other/social-icons-box'); ?>
         </div>
 
-        <div class="left-container">
-          <?php $author_id = get_the_author_meta('ID'); ?>
-          <h1><?php _e("Posts by", "twisted") ?>
-            <?php 
-              echo get_the_author_meta('first_name', $author_id);
-              echo get_the_author_meta('last_name', $author_id);
-            ?>
-            (@<?php echo get_the_author_meta('nickname', $author_id); ?>)
-          </h1>        	
+        <div class="left-container">          
+          <?php the_archive_title( '<h1>', '</h1>' ); ?>          
           <div class="description">
-            <?php echo get_the_author_meta('description', $author_id); ?>
+            <?php the_archive_description(); ?>
           </div>
         </div>
       </section>

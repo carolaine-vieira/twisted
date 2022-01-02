@@ -367,12 +367,12 @@ section {
 #first-section .right-container {
   z-index: 1;
   position: relative;
-  margin-top: 160px;
+  padding: 160px var(--global-padding) 120px var(--global-padding);
 }
 
 #first-section .left-container {
-  width: 50%;
-  padding-left: var(--global-padding);
+  background: rgba(0, 0, 0, 0.2);
+  width: 65%;
   color: var(--white);
 }
 
@@ -384,6 +384,7 @@ section {
           animation-name: aside;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  width: 80%;
 }
 
 #first-section .left-container h1 {
@@ -392,13 +393,12 @@ section {
 }
 
 #first-section .left-container .description {
-  margin-top: 16px;
+  margin: 16px 0 0 0;
   font-size: 15px;
 }
 
 #first-section .right-container {
   width: 35%;
-  margin-left: 15%;
   padding-right: var(--global-padding);
 }
 
@@ -408,7 +408,7 @@ section {
   display: flex;
   border-radius: 2px;
   overflow: hidden;
-  margin: 0 0 32px -80px;
+  margin: 0 0 32px -130px;
   font-family: var(--title-font);
   position: relative;
   top: 150px;
@@ -518,6 +518,37 @@ section {
 
 #posts #posts-container .post .post-description h3 a {
   color: var(--color-one);
+}
+
+#pagination {
+  padding: 0 var(--global-padding) 50px var(--global-padding);
+}
+
+#pagination .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+#pagination .nav-links a,
+#pagination .nav-links span.current {
+  display: inline-block;
+  margin: 0 0 5px 5px;
+  background: var(--white);
+  color: var(--color-one);
+  padding: 10px;
+  font-family: var(--title-font);
+  min-width: 50px;
+  text-align: center;
+}
+
+#pagination .nav-links span.current {
+  -webkit-box-shadow: inset -50px 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset -50px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .page-container {
@@ -1822,6 +1853,10 @@ footer .container .footer-links li a:hover {
   font-family: var(--title-font);
   font-size: 90px;
   text-align: center;
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 #twiste-minimal-template .container .info .subtitle {
@@ -1830,6 +1865,10 @@ footer .container .footer-links li a:hover {
   font-weight: 300;
   font-style: italic;
   margin-top: 5px;
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 #twiste-minimal-template .container .info .blog-link {
@@ -1901,6 +1940,10 @@ footer .container .footer-links li a:hover {
   color: var(--white);
 }
 
+#twisted-archive #posts {
+  min-height: unset;
+}
+
 #twisted-archive #posts #posts-container .post {
   width: calc( 100vw / 5 - 35px);
 }
@@ -1942,6 +1985,28 @@ footer .container .footer-links li a:hover {
   }
   to {
     bottom: 20px;
+  }
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
