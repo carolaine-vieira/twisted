@@ -2067,8 +2067,8 @@ footer .container .footer-links li a:hover {
     margin-top: 10px;
   }
   .social-icons-box li {
-    font-size: 14px;
-    margin-right: 5px;
+    font-size: 18px;
+    margin-right: 8px !important;
   }
 }
 

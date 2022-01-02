@@ -1,5 +1,7 @@
 # Twisted theme for _WordPress_
 
+![Preview](http://eky.hk/upload/file/png61d12cf2f40d1.png)
+
 1. [Install Guide](#install-guide) <br>
    1.1. [Configuration Page](#configuration-page)
 2. [Preview](#preview)
