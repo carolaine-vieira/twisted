@@ -36,46 +36,46 @@
           </div>
 
           <div class="item">
-            <div class="item-title">Share this post</div>
+            <div class="item-title"><?php _e("Share this post", "twisted"); ?></div>
             <div class="item-content">
               <?php get_template_part('template-parts/other/share-buttons'); ?>
             </div>
           </div>
 
           <div class="item">
-            <div class="item-title">Post Info</div>
+            <div class="item-title"><?php _e("Post Information", "twisted"); ?></div>
             <div class="item-content post-info">
               <div class="post-date">
-                <span class="title">Posted on: </span>
+                <span class="title"><?php _e("Posted on", "twisted"); ?>: </span>
                 <?php the_date(); ?>
               </div>
               <?php 
                 if(has_tag()) {
               ?>
               <div class="post-tags">
-                <span class="title">Tags: </span>                
+                <span class="title"><?php _e("Tags", "twisted"); ?>: </span>                
                 <?php the_tags(""); ?>
               </div>
               <?php
                 } 
               ?> 
               <div class="post-shortlink">
-                <span class="title">Short URL: </span>
+                <span class="title"><?php _e("Short URL", "twisted"); ?>: </span>
                 <span class="short"><?php echo wp_get_shortlink(); ?></span>
               </div>
             </div>
           </div>
 
           <div class="item">
-            <div class="item-title">Comments</div>
+            <div class="item-title"><?php _e("Comments", "twisted"); ?></div>
             <div class="item-content comments">
               <span class="title"><?php comments_number() ?></span>
-              <a href="#scroll-comment">Write a response</a>
+              <a href="#scroll-comment"><?php _e("Write a response", "twisted"); ?></a>
             </div>
           </div>
 
           <div class="item">
-            <div class="item-title">Author</div>
+            <div class="item-title"><?php _e("Author", "twisted"); ?></div>
             <div class="item-content author">
             <?php the_author_posts_link(); ?>
             </div>
@@ -84,12 +84,12 @@
           <div class="permalink-navigation">
             <?php
               the_post_navigation(array(
-                'prev_text' => '' . __('<b>Previous:</b> ', 'twentyfifteen') . '</span> ' .
-                    '<span class="screen-reader-text">' . __('Previous post:', 'twentyfifteen') . '</span> ' .
+                'prev_text' => '<span>' . __('Previous:', 'twisted') . '</span> ' .
+                    '<span class="screen-reader-text">' . __('Previous post:', 'twisted') . '</span> ' .
                     '<span class="post-title">%title</span>',
                     
-                'next_text' => '' . __('<b>Next:</b> ', 'twentyfifteen') . '</span> ' .
-                    '<span class="screen-reader-text">' . __('Next post:', 'twentyfifteen') . '</span> ' .
+                'next_text' => '<span>' . __('Next:', 'twisted') . '</span> ' .
+                    '<span class="screen-reader-text">' . __('Next post:', 'twisted') . '</span> ' .
                     '<span class="post-title">%title</span>',
               ));
             ?>

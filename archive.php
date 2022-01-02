@@ -8,7 +8,7 @@
 
         <div class="left-container">
           <?php $author_id = get_the_author_meta('ID'); ?>
-          <h1>Posts by 
+          <h1><?php _e("Posts by", "twisted") ?>
             <?php 
               echo get_the_author_meta('first_name', $author_id);
               echo get_the_author_meta('last_name', $author_id);
@@ -30,7 +30,7 @@
                 get_template_part('template-parts/content/content', get_post_format());
               endwhile; 
             else:
-              _e('Sorry, no posts matched your criteria.', 'textdomain');
+              _e('Sorry, no posts matched your criteria.', 'twisted');
             endif; 
           ?>  
         </div>
@@ -40,8 +40,8 @@
         <?php 
           the_posts_pagination( array(
             'mid_size'  => 2,
-            'prev_text' => __( 'Back', 'textdomain' ),
-            'next_text' => __( 'Onward', 'textdomain' ),
+            'prev_text' => __( 'Previous Posts', 'twisted' ),
+            'next_text' => __( 'Next Posts', 'twisted' ),
             )
           ); 
         ?>

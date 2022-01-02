@@ -9,14 +9,7 @@
         <?php endif; ?>
       >
         <div class="social-media">
-          <ul>
-            <li>
-              <a href=""><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-instagram"></i></a>
-            </li>
-          </ul>
+          <?php get_template_part('template-parts/other/social-icons-box'); ?>
         </div>
 
         <div class="left-container">
@@ -32,13 +25,12 @@
           <?php
             while (have_posts()): the_post();
           ?>
-                <div class="post-single">          
-                  <?php the_content(); ?>
-                </div>   
-
-              <?php
-                endwhile;
-              ?>
+              <div class="post-single">          
+                <?php the_content(); ?>
+              </div>   
+          <?php
+            endwhile;
+          ?>
         </div> 
       </section>
 

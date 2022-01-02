@@ -13,8 +13,8 @@
       ?>      
     >
       <div class="left-container">
-        <b>Liked our work?</b>
-        <i>Send an email to contact us!</i>
+        <b><?php _e("Liked our work?", "twisted") ?></b>
+        <i><?php _e("Send an email to contact us!", "twisted") ?></i>
       </div>
 
       <div class="right-container">
@@ -28,7 +28,7 @@
     
     <footer>
       <div class="social-media">
-        <span>Follow us to see more</span>
+        <span><?php _e("Follow us to see more", "twisted") ?></span>
         <ul>
           <?php get_template_part('template-parts/other/social-icons-box'); ?>
         </ul>
@@ -43,7 +43,7 @@
       </div>
     </footer>
 
-    <a id="scroll-top" title="Scroll back to top"><i class="fas fa-chevron-up"></i></a>
+    <a id="scroll-top" title="<?php _e("Scroll back to top", "twisted") ?>"><i class="fas fa-chevron-up"></i></a>
 
     <?php wp_footer(); ?>
   </body>

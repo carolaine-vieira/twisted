@@ -17,7 +17,7 @@
           <h1><?php bloginfo( 'name' ); ?></h1>
           <div class="subtitle"><?php bloginfo( 'description' ); ?></div>
           <div class="blog-link">
-            <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>">Enter site</a>
+            <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>"><?php _e("Enter site", "twisted") ?></a>
           </div>
         </div>
       </div>

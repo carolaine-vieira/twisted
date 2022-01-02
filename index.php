@@ -70,7 +70,7 @@
               get_template_part('template-parts/content/content', get_post_format());
             endwhile; 
           else:
-            _e('Sorry, no posts matched your criteria.', 'textdomain');
+            _e('Sorry, no posts matched your criteria.', 'twisted');
           endif; 
         ?> 
       </div>

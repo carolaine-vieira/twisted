@@ -2,7 +2,7 @@
 
 // Enqueue scripts and styles
 function twisted_theme_scripts() {
-  wp_enqueue_style('global template', get_template_directory_uri().'/assets/css/css-dist/style.min.css', array(), '1.0', 'all');	
+  wp_enqueue_style('global template', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all');	
   wp_enqueue_script('global scripts', get_template_directory_uri().'/assets/js/script.js', array(), '1.0', 'all');
   wp_enqueue_script('isotope masonry', 'https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.js', array(), '3.0.6', 'all');
   wp_enqueue_script('awesome icons', "https://kit.fontawesome.com/eb5e14c15e.js", array(), '5.15', 'all');
@@ -47,17 +47,10 @@ if ( !function_exists('twisted_setup') ) {
       )
     );
 
-    // Editor color palette.
-    $black     = '#000000';
-    $dark_gray = '#28303D';
-    $gray      = '#39414D';
-    $green     = '#D1E4DD';
-    $blue      = '#D1DFE4';
-    $purple    = '#D1D1E4';
-    $red       = '#E4D1D1';
-    $orange    = '#E4DAD1';
-    $yellow    = '#EEEADD';
-    $white     = '#FFFFFF';
+    // traducao
+    $textdomain = 'twisted';
+    load_theme_textdomain( $textdomain, get_stylesheet_directory().'/languages/');
+    load_theme_textdomain( $textdomain, get_template_directory().'/languages/');
   }
   add_action( 'after_setup_theme', 'twisted_setup' );
 }
@@ -67,8 +60,8 @@ function testimonial_custom_post_type() {
   register_post_type('testimonial',
     array(
       'labels' => array(
-        'name'          => __('Testimonials', 'textdomain'),
-        'singular_name' => __('Testimonial', 'textdomain'),              
+        'name'          => __('Testimonials', 'twisted'),
+        'singular_name' => __('Testimonial', 'twisted'),              
       ),
       'public'      => true,
       'has_archive' => false,

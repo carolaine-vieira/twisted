@@ -7,14 +7,14 @@
         </div>
 
         <div class="left-container">
-          <h1>Error 404</h1>        	
+          <h1><?php _e("Error 404", "twisted") ?></h1>        	
         </div>
       </section>
 
       <section id="error404-message">
         <div class="container">
           <i class="fas fa-exclamation"></i>
-          <h3>This content could not be found.</h3>
+          <h3><?php _e("This content could not be found.", "twisted") ?></h3>
         </div>
       </section>
     </div>
