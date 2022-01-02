@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Twisted 1.0\n"
-"POT-Creation-Date: 2022-01-01 20:37-0300\n"
-"PO-Revision-Date: 2022-01-01 20:37-0300\n"
+"POT-Creation-Date: 2022-01-01 21:16-0300\n"
+"PO-Revision-Date: 2022-01-01 21:16-0300\n"
 "Last-Translator: \n"
 "Language-Team: Carolaine Vieira (s.carolaine.v@gmail.com)\n"
 "Language: en_US\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;esc_attr_e\n"
+"X-Poedit-KeywordsList: Palavras-chave adicionais;_n_noop;__;_e;esc_attr_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:10
@@ -92,6 +92,71 @@ msgstr ""
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
+#: functions.php:130
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:336
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgstr ""
+
+#: functions.php:131
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgstr ""
+
+#: functions.php:132
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgstr ""
+
+#: functions.php:133
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgstr ""
+
+#: functions.php:134
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:366
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgstr ""
+
+#: functions.php:135
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgstr ""
+
+#: functions.php:136
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr ""
+
+#: functions.php:137
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgstr ""
+
+#: functions.php:138
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:371
+msgid "Begin installing plugin"
+msgstr ""
+
+#: functions.php:139
+msgid "Activate installed plugin"
+msgstr ""
+
 #: functions.php:140
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:385
 msgid "Return to Required Plugins Installer"
@@ -119,6 +184,19 @@ msgstr ""
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:332
 #, php-format
 msgid "Updating Plugin: %s"
+msgstr ""
+
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:354
+#, php-format
+msgid "There is an update available for: %1$s."
+msgstr ""
+
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:376
+msgid "Begin updating plugin"
+msgstr ""
+
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:381
+msgid "Begin activating plugin"
 msgstr ""
 
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:386

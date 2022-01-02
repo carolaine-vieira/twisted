@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twisted 1.0\n"
 "POT-Creation-Date: 2022-01-01 20:37-0300\n"
-"PO-Revision-Date: 2022-01-01 21:02-0300\n"
+"PO-Revision-Date: 2022-01-01 21:26-0300\n"
 "Last-Translator: \n"
 "Language-Team: Carolaine Vieira (s.carolaine.v@gmail.com)\n"
 "Language: pt_BR\n"
@@ -91,6 +91,79 @@ msgstr "Instalando Plugin: %s"
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:333
 msgid "Something went wrong with the plugin API."
 msgstr "Alguma coisa deu errado com a API do plugin."
+
+#: functions.php:130
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:336
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgstr "Este tema precisa do seguinte plugin: %1$s."
+
+#: functions.php:131
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgstr "Este tema recomenda o seguinte plugin: %1$s."
+
+#: functions.php:132
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgstr ""
+"Desculpe, mas você não tem as permissões corretas para instalar o plugin %s. "
+"Contate o administrador do site para ajuda em como instalar esse plugin."
+
+#: functions.php:133
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgstr "O seguinte plugin requerido está atualmente inativo: %1$s."
+
+#: functions.php:134
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:366
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgstr "O seguinte plugin recomendado está atualmente inativo: %1$s."
+
+#: functions.php:135
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgstr ""
+"Desculpe, mas você não tem as permissões corretas para ativar o plugin %s. "
+"Contate o administrador do site para ajuda em como ativar esse plugin."
+
+#: functions.php:136
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr ""
+"O seguinte plugin deve ser atualizado para a última versão para aumentar a "
+"compatibilidade com este tema: %1$s."
+
+#: functions.php:137
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgstr ""
+"Desculpe, mas você não tem as permissões corretas para atualizar o plugin "
+"%s. Contate o administrador do site para ajuda em como atualizar esse plugin."
+
+#: functions.php:138
+#: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:371
+msgid "Begin installing plugin"
+msgstr "Instalação do plugin iniciada"
+
+#: functions.php:139
+msgid "Activate installed plugin"
+msgstr "Ative o plugin instalado"
 
 #: functions.php:140
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:385
@@ -203,7 +276,7 @@ msgstr "Ativo"
 
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2327
 msgid "Required Update not Available"
-msgstr "Atualização necessária indisponível "
+msgstr "Atualização necessária indisponível"
 
 #: lib/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2330
 msgid "Requires Update"
