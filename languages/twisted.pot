@@ -471,3 +471,7 @@ msgstr ""
 #: template-parts/other/testimonial.php:14
 msgid "said"
 msgstr ""
+
+#: header.php:11
+msgid "Skip to main content"
+msgstr ""

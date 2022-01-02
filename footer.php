@@ -43,7 +43,7 @@
       </div>
     </footer>
 
-    <a id="scroll-top" title="<?php _e("Scroll back to top", "twisted") ?>"><i class="fas fa-chevron-up"></i></a>
+    <a href="#first-section" id="scroll-top" title="<?php _e("Scroll back to top", "twisted") ?>"><i class="fas fa-chevron-up"></i></a>
 
     <?php wp_footer(); ?>
   </body>

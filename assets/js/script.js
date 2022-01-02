@@ -144,7 +144,3 @@ const openSidebar = () => {
     $(container).toggleClass("sidebar-opened");
   });
 };
-
-// document.documentElement.className
-//         = document.documentElement.className
-//         .replace(/\bno-js\b/g, '') + ' js ';

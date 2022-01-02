@@ -60,7 +60,7 @@
         ?>
       </div>
     </section>
-
+    
     <section id="posts">
       <div id="posts-container" class="grid pgScroll">
         <?php 

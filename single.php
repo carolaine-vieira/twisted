@@ -5,7 +5,7 @@
         <?php if (has_post_thumbnail()) : ?>
           style="background-image: url(<?php the_post_thumbnail_url(); ?>)"
         <?php else: ?>
-          style="background: #222 url(<?php header_image(); ?>)"
+          style="background-image: url(<?php header_image(); ?>)"
         <?php endif; ?>
       >
         <div class="social-media">
@@ -84,11 +84,11 @@
           <div class="permalink-navigation">
             <?php
               the_post_navigation(array(
-                'prev_text' => '<span>' . __('Previous:', 'twisted') . '</span> ' .
+                'prev_text' => '<b>' . __('Previous:', 'twisted') . '</b> ' .
                     '<span class="screen-reader-text">' . __('Previous post:', 'twisted') . '</span> ' .
                     '<span class="post-title">%title</span>',
                     
-                'next_text' => '<span>' . __('Next:', 'twisted') . '</span> ' .
+                'next_text' => '<b>' . __('Next:', 'twisted') . '</b> ' .
                     '<span class="screen-reader-text">' . __('Next post:', 'twisted') . '</span> ' .
                     '<span class="post-title">%title</span>',
               ));

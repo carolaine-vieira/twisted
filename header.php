@@ -8,6 +8,7 @@
   </head>
 
   <body <?php body_class(); ?>>  
+    <a class="skip-main" href="#posts"><?php _e("Skip to main content", "twisted"); ?></a>
     <header>
       <h2>
         <span>

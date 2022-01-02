@@ -476,3 +476,7 @@ msgstr "Entrar no site"
 #: template-parts/other/testimonial.php:14
 msgid "said"
 msgstr "disse"
+
+#: header.php:11
+msgid "Skip to main content"
+msgstr "Pular para o conteúdo principal"
