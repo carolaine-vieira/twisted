@@ -1,7 +1,7 @@
 # Twisted theme for _WordPress_
 
 1. [Install Guide](#install-guide) <br>
-   1.1. [Configuration Page](configuration-page)
+   1.1. [Configuration Page](#configuration-page)
 2. [Preview](#preview)
 3. [Contact](#contact)
 
