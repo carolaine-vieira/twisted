@@ -106,7 +106,7 @@ header
 
     ul
       li
-        display: inline-flex
+        display: none
         margin-left: 32px
 
     a.sidebar-button
@@ -138,12 +138,9 @@ header
       justify-content: center
       align-items: center
 
-      li
-        display: none
-
       li:nth-child(1),
       li:nth-child(2)
-        display: inline-flex
+        display: inline-flex !important
 
       li.current-menu-item,
       li.current_page_item
@@ -884,7 +881,10 @@ footer
         display: block
         margin-top: 5px
 
-    .footer-links
+    .menu
+      width: 100%
+
+    ul
       column-count: 3
       column-gap: 20px
       width: 100%

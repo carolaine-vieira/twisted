@@ -4,6 +4,11 @@ $(document).ready(function () {
   initSlide();
   initAccordion();
   openSidebar();
+
+  // showing first two itens on header menu
+  const navigate = document.querySelectorAll("header .twisted-home-menu li");
+  $(navigate[0]).css("display", "inline-flex");
+  $(navigate[1]).css("display", "inline-flex");
 });
 
 // Init masonry elements
@@ -126,8 +131,6 @@ window.onscroll = pageAnimation = () => {
 
 // Adding open sidebar menu link
 const openSidebar = () => {
-  const root = $(":root");
-
   $("header nav").append(`<a class="sidebar-button open-sidebar"></a>`);
 
   $("header nav .sidebar-button").click(function (e) {
