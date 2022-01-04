@@ -5,7 +5,8 @@
 1. [Install Guide](#install-guide) <br>
    1.1. [Configuration Page](#configuration-page)
 2. [Preview](#preview)
-3. [Contact](#contact)
+3. [ACF Data](#acf-data)
+4. [Contact](#contact)
 
 <hr>
 
@@ -24,6 +25,10 @@ For some options, you must insert your own information in the Configuration Page
 ### Screenshots
 
 [Zip File](https://drive.google.com/file/d/1m2hTOLusu8D-LdKroY5HnlEEsjc_mn3C/view?usp=sharing)
+
+## ACF Data
+
+[JSON File](https://drive.google.com/file/d/1U2eiKt70qpdgbwbjTkWF-IOo3POYa4kh/view?usp=sharing)
 
 ## Contact
 
